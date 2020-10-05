@@ -1,10 +1,12 @@
-window.onload =  function() {
-    firebase.auth().onAuthStateChanged(async function(user) {
-        if (user != null && user.emailVerified) {
-            view.showPage("index")
-            
+window.onload = function() {
+    view.showScreen("index");
+    
+    firebase.auth().onAuthStateChanged(function(user) {
+        console.log(user);
+        if(user != null) {
+            view.showScreen("products");
         } else {
-            view.showPage("signIn")
+            view.showScreen("signIn");
         }
-    })
+    });
 }
