@@ -18,40 +18,36 @@ view.setText = function (tagId, text) {
 view.setActive = function (tagId, active) {
     document.getElementById(tagId).disabled = !active;
 }
-
-view.showScreen = async function(screenName)
-{
+view.setUpPageViewBtn = async function (classBtn, namePage) {
+    let allBtn = document.getElementsByClassName(classBtn)
+    if (allBtn.length > 0) {
+        for (let i = 0; i < allBtn.length; i++) {
+            allBtn[i].onclick = async function () {
+                await view.showScreen(namePage)
+                if (namePage == "shop") {
+                }
+            }
+        }
+    }
+}
+view.makeAllBtnShow = function () {
+    view.setUpPageViewBtn("sign-up-btn", "signUp")
+    view.setUpPageViewBtn("sign-in-btn", "signIn")
+    view.setUpPageViewBtn("shop-btn", "shop")
+    view.setUpPageViewBtn("forgot-btn", "forgotPass")
+}
+view.showScreen = async function (screenName) {
     let content = document.getElementById('content')
-    switch(screenName)
-    {
+    switch (screenName) {
         case 'main':
             content.innerHTML = components.main
-            let signUpLink = document.getElementById("sign-up-link")
-            signUpLink.onclick = function()
-            {
-                view.showScreen("signUp")
-            }
-            let signInLink = document.getElementById("sign-in-link")
-            signInLink.onclick = function()
-            {
-                view.showScreen("signIn")
-            }
+            view.makeAllBtnShow()
             break;
         case 'signIn':
-            let signUpLink1 = document.getElementById("sign-up-link")
-            signUpLink1.onclick = function()
-            {
-                view.showScreen("signUp")
-            }   
             content.innerHTML = components.signIn
-            let showCart = document.getElementById("cart")
-            showCart.style.opacity = "0"
+            view.makeAllBtnShow()
             let formSignIn = document.getElementById('form-sign-in')
-            document.getElementById("check-out").onclick = function () {
-                controller.signOut();
-            }
-            formSignIn.onsubmit = function(event)
-            {
+            formSignIn.onsubmit = function (event) {
                 event.preventDefault()
                 let email = formSignIn.email.value;
                 let password = formSignIn.password.value;
@@ -64,33 +60,10 @@ view.showScreen = async function(screenName)
                     controller.signIn(email, password);
                 }
             }
-            // Modal      var modal = document.getElementById("myModal");
-                var btn = document.getElementById("cart");
-                var close = document.getElementsByClassName("close")[0];
-                // tại sao lại có [0] như  thế này bởi vì mỗi close là một html colection nên khi mình muốn lấy giá trị html thì phải thêm [0]. 
-                // Nếu mình có 2 cái component cùng class thì khi [0] nó sẽ hiển thị component 1 còn [1] thì nó sẽ hiển thị component 2.
-                var close_footer = document.getElementsByClassName("close-footer")[0];
-                var order = document.getElementsByClassName("order")[0];
-                btn.onclick = function () {
-                modal.style.display = "block";
-                }
-                close.onclick = function () {
-                modal.style.display = "none";
-                }
-                close_footer.onclick = function () {
-                modal.style.display = "none";
-                }
-                order.onclick = function () {
-                alert("Cảm ơn bạn đã thanh toán đơn hàng")
-                }
-                window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-                }
             break;
         case 'signUp':
             content.innerHTML = components.signUp
+            view.makeAllBtnShow()
             let formSignUp = document.getElementById('form-sign-up');
             formSignUp.onsubmit = function (event) {
                 event.preventDefault();
@@ -120,13 +93,59 @@ view.showScreen = async function(screenName)
 
             }
             break;
-        case 'forgotpass':
+        case 'forgotPass':
             content.innerHTML = components.forgotpass
+            break;
+        case 'updatePass':
+            let newPass = document.getElementById("newPass")
+            let validateResult = [
+                view.validate(newPass != "", "password-error", "input password"),
+                view.validate(passwordConfirmation != "" && password == passwordConfirmation, "password-confirmation-error", "Password confirmation is not match")
+            ]
+            if (isPassed(validateResult)) {
+                controller.updatePassword(newPass)
+            }
             break;
         case 'shop':
             content.innerHTML = components.shop
+
+
+            //CHỨC NĂNG GIỎ HÀNG
+
+            //Khai báo DOM
+            let showCart = document.getElementById("cart") //Nút giỏ hàng
+            var modal = document.getElementById("myModal"); //Modal giỏ hàng 
+            var close = document.getElementsByClassName("close")[0]; //Nút close X trong modal giỏ hàng
+            var close_footer = document.getElementsByClassName("close-footer")[0]; //Nút "đóng" trong modal giỏ hàng
+            var order = document.getElementsByClassName("order")[0]; //Nút "thanh toán" trong modal giỏ hàng
+
+            //Xử lý khi click vào nút giỏ hàng hiển thị modal giỏ hàng => hiên thị model từ "none" sang "block"
+            showCart.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            //Xử lý việc đóng (close) modal giỏ hàng => hiên thị model từ "block" sang "none"
+            close.onclick = function () {
+                modal.style.display = "none";
+            }
+            close_footer.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                //For test
+                console.log(event.target) //event.target sẽ hiển thị thẻ mà chuột click vào
+                //End test
+                if (event.target === modal) {   
+                    modal.style.display = "none";
+                }
+            }
+            //Xử lý khi ấn nút thanh toán trong modal giỏ hàng
+            order.onclick = function () {
+                alert("Cảm ơn bạn đã thanh toán đơn hàng")
+            }
+            //CHỨC NĂNG ĐĂNG XUẤT
             let checkOut = document.getElementById("check-out")
-            checkOut.onclick = function(){
+            checkOut.onclick = function () {
                 controller.checkOut()
                 content.innerHTML = components.checkout
             }

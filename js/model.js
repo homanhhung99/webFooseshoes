@@ -28,4 +28,5 @@ model.saveProduct = function (ideaDataProduct) {
         price: refinedIdeaDataProduct.price
     };
     model.ideas.push(newIdea);
-}// Modal
+}
+

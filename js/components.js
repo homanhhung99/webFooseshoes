@@ -7,10 +7,10 @@ components.header = `
 		   </div>
 		   <div class="cssmenu">
 			  <ul>
-			  <li><a href="#" id="sign-up-link">Sign up</a></li> 
-			  <li><a href="#" id="shop">Store Locator</a></li> 
-			  <li><a href="#" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
-			  <li><a href="#" id="check-out">CheckOut</a></li>
+			  <li><a href="#" class="sign-up-btn" id="sign-up-link">Sign up</a></li> 
+			  <li><a href="#" class="shop-btn" id="shop">Store Locator</a></li> 
+			  <li><a href="#" class="sign-in-btn" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
+			  <li><a href="#" class="check-out" id="check-out">CheckOut</a></li>
 			  </ul>
 		   </div>
 		   <ul class="icon2 sub-icon2 profile_img">
@@ -953,40 +953,11 @@ components.signIn =`
 		   </div>
 		   <div class="cssmenu">
 			  <ul>
-			  <li><a href="#" id="sign-up-link">Sign up</a></li> 
-			  <li><a href="#" id="shop">Store Locator</a></li> 
-			  <li><a href="#" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
-			  <li><a href="#" id="check-out">CheckOut</a></li>
-			  <li>   <button id="cart">
-			  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-			  Giỏ Hàng
-		  </button>
-		  <div id="myModal" class="modal">
-			  <div class="modal-content">
-				  <div class="modal-header">
-					  <h5 class="modal-title">Giỏ Hàng</h5>
-					  <span class="close">&times;</span>
-				  </div>
-				  <div class="modal-body">
-					  <div class="cart-row">
-						  <span class="cart-item cart-header cart-column">Sản Phẩm</span>
-						  <span class="cart-price cart-header cart-column">Giá</span>
-						  <span class="cart-quantity cart-header cart-column">Số Lượng</span>
-					  </div>
-					  <div class="cart-items">
-
-					  </div>
-					  <div class="cart-total">
-						  <strong class="cart-total-title">Tổng Cộng:</strong>
-						  <span class="cart-total-price">0VNĐ</span>
-					  </div>
-				  </div>
-
-				  <div class="modal-footer">
-					  <button type="button" class="btn btn-secondary close-footer">Đóng</button>
-					  <button type="button" class="btn btn-primary order">Thanh Toán</button>
-				  </div>
-			  </div>
+			  <li><a href="#" class="sign-up-btn" id="sign-up-link">Sign up</a></li> 
+			  <li><a href="#" class="shop-btn" id="shop">Store Locator</a></li> 
+			  <li><a href="#" class="sign-in-btn" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
+			  <li><a href="#" class="check-out" id="check-out">CheckOut</a></li>
+			  <li>   
 		  </div></li>
 			  </ul>
 		   </div>
@@ -1546,7 +1517,7 @@ components.signIn =`
                        </p>
                        <div class="message-error" id="password-error"></div>
                         <p id="login-form-remember">
-                           <label><a href="#">Forget Your Password ? </a></label>
+                           <label><a href="#" id="forgot-pass-link">Forget Your Password ? </a></label>
                         </p>
                         <p>
                            <input type="submit" value="Login" id="sign-in-btn">
@@ -1620,7 +1591,7 @@ components.signUp =components.header + `
            </div>
            <div class="message-error" id="password-confirmation-error"></div>
            
-           <button class="btn-primary" id="sign-up-btn">Register</button>
+           <button class="btn btn-primary" style="background-color: lightslategray;" id="sign-up-btn">Register</button>
            <div class="message-error" id="sign-up-error"></div>
            <div class="message-success" id="sign-up-success"></div>
        </form>
@@ -1641,32 +1612,32 @@ components.shop =`
 			  <li><a href="#" id="check-out">CheckOut</a></li>
 			  <li>   <button id="cart">
 			  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-			  Giỏ Hàng
+			  Cart
 		  </button>
 		  <div id="myModal" class="modal">
 			  <div class="modal-content">
 				  <div class="modal-header">
-					  <h5 class="modal-title">Giỏ Hàng</h5>
+					  <h5 class="modal-title">Cart</h5>
 					  <span class="close">&times;</span>
 				  </div>
 				  <div class="modal-body">
 					  <div class="cart-row">
-						  <span class="cart-item cart-header cart-column">Sản Phẩm</span>
-						  <span class="cart-price cart-header cart-column">Giá</span>
-						  <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+						  <span class="cart-item cart-header cart-column">Product</span>
+						  <span class="cart-price cart-header cart-column">Price</span>
+						  <span class="cart-quantity cart-header cart-column">Amount</span>
 					  </div>
 					  <div class="cart-items">
 
 					  </div>
 					  <div class="cart-total">
-						  <strong class="cart-total-title">Tổng Cộng:</strong>
-						  <span class="cart-total-price">0VNĐ</span>
+						  <strong class="cart-total-title">Total:</strong>
+						  <span class="cart-total-price">0$</span>
 					  </div>
 				  </div>
 
 				  <div class="modal-footer">
-					  <button type="button" class="btn btn-secondary close-footer">Đóng</button>
-					  <button type="button" class="btn btn-primary order">Thanh Toán</button>
+					  <button type="button" class="btn btn-secondary close-footer">Closed</button>
+					  <button type="button" class="btn btn-primary order">Pay</button>
 				  </div>
 			  </div>
 		  </div></li>

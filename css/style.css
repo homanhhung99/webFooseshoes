@@ -3365,12 +3365,6 @@ p.cart a:hover {
     border-color: #ccc;
   }
   
-  .btn-primary {
-    color: #fff;
-    background-color: #0275d8;
-    border-color: #0275d8;
-  }
-  
   .modal-header {
     align-items: center;
     display: flex;
