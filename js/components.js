@@ -1,5 +1,547 @@
 let components = {}
-components.main = `<div class="index-banner">
+components.header = `
+<div class="header-top">
+		<div class="wrap"> 
+		   <div class="logo">
+			   <a href="index.html"><img src="images/logo.png" alt=""/></a>
+		   </div>
+		   <div class="cssmenu">
+			  <ul>
+			  <li><a href="#" id="sign-up-link">Sign up</a></li> 
+			  <li><a href="#" id="shop">Store Locator</a></li> 
+			  <li><a href="#" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
+			  <li><a href="#" id="check-out">CheckOut</a></li>
+			  </ul>
+		   </div>
+		   <ul class="icon2 sub-icon2 profile_img">
+			   <li><a class="active-icon c2" href="#"> </a>
+				   <ul class="sub-icon2 list">
+					   <li><h3>Products</h3><a href=""></a></li>
+					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+				   </ul>
+			   </li>
+		   </ul>
+		   <div class="clear"></div>
+		</div>
+		</div>
+		<div class="header-bottom">
+			<div class="wrap">
+			  <!-- start header menu -->
+			<ul class="megamenu skyblue">
+			   <li><a class="color1" href="#" id="main">Home</a></li>
+			   <li class="grid"><a class="color2" href="#">Men</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">men</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <img src="images/nav_img.jpg" alt=""/>
+					   </div>
+				   </div>
+				   </li>
+					<li class="active grid"><a class="color4" href="#">Women</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							<div class="h_nav">
+							  <img src="images/nav_img1.jpg" alt=""/>
+							</div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>				
+				   <li><a class="color5" href="#">Kids</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <img src="images/nav_img2.jpg" alt=""/>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color6" href="#">Sale</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>	
+							   <div class="h_nav">
+								   <h4 class="top">my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color7" href="#">Customize</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="sign-in-link">login</a></li>
+									   <li><a href="#" id="sign-up-link">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>
+				   <li><a class="color8" href="#">Shop</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color9" href="#">Football</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>
+				   <li><a class="color10" href="#">Running</a></li>
+				   <li><a class="color11" href="#">Originals</a></li>
+				   <li><a class="color12" href="#">Basketball</a></li>
+				   
+			  </ul>
+			  <div class="clear"></div>
+			</div>
+		  </div>`
+components.main =components.header +
+ `<div class="index-banner">
 <div class="wmuSlider example1" style="height: 560px;">
  <div class="wmuSliderWrapper">
 	 <article style="position: relative; width: 100%; opacity: 1;"> 
@@ -403,7 +945,578 @@ components.main = `<div class="index-banner">
 </div>
 </div>
 `
-components.signIn = `
+components.signIn =`
+<div class="header-top">
+		<div class="wrap"> 
+		   <div class="logo">
+			   <a href="index.html"><img src="images/logo.png" alt=""/></a>
+		   </div>
+		   <div class="cssmenu">
+			  <ul>
+			  <li><a href="#" id="sign-up-link">Sign up</a></li> 
+			  <li><a href="#" id="shop">Store Locator</a></li> 
+			  <li><a href="#" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
+			  <li><a href="#" id="check-out">CheckOut</a></li>
+			  <li>   <button id="cart">
+			  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+			  Giỏ Hàng
+		  </button>
+		  <div id="myModal" class="modal">
+			  <div class="modal-content">
+				  <div class="modal-header">
+					  <h5 class="modal-title">Giỏ Hàng</h5>
+					  <span class="close">&times;</span>
+				  </div>
+				  <div class="modal-body">
+					  <div class="cart-row">
+						  <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+						  <span class="cart-price cart-header cart-column">Giá</span>
+						  <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+					  </div>
+					  <div class="cart-items">
+
+					  </div>
+					  <div class="cart-total">
+						  <strong class="cart-total-title">Tổng Cộng:</strong>
+						  <span class="cart-total-price">0VNĐ</span>
+					  </div>
+				  </div>
+
+				  <div class="modal-footer">
+					  <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+					  <button type="button" class="btn btn-primary order">Thanh Toán</button>
+				  </div>
+			  </div>
+		  </div></li>
+			  </ul>
+		   </div>
+		   <ul class="icon2 sub-icon2 profile_img">
+			   <li><a class="active-icon c2" href="#"> </a>
+				   <ul class="sub-icon2 list">
+					   <li><h3>Products</h3><a href=""></a></li>
+					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+				   </ul>
+			   </li>
+		   </ul>
+		   <div class="clear"></div>
+		</div>
+		</div>
+		<div class="header-bottom">
+			<div class="wrap">
+			  <!-- start header menu -->
+			<ul class="megamenu skyblue">
+			   <li><a class="color1" href="#" id="main">Home</a></li>
+			   <li class="grid"><a class="color2" href="#">Men</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">men</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <img src="images/nav_img.jpg" alt=""/>
+					   </div>
+				   </div>
+				   </li>
+					<li class="active grid"><a class="color4" href="#">Women</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							<div class="h_nav">
+							  <img src="images/nav_img1.jpg" alt=""/>
+							</div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>				
+				   <li><a class="color5" href="#">Kids</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <img src="images/nav_img2.jpg" alt=""/>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color6" href="#">Sale</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>	
+							   <div class="h_nav">
+								   <h4 class="top">my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color7" href="#">Customize</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="sign-in-link">login</a></li>
+									   <li><a href="#" id="sign-up-link">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>
+				   <li><a class="color8" href="#">Shop</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color9" href="#">Football</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>
+				   <li><a class="color10" href="#">Running</a></li>
+				   <li><a class="color11" href="#">Originals</a></li>
+				   <li><a class="color12" href="#">Basketball</a></li>
+				   
+			  </ul>
+			  <div class="clear"></div>
+			</div>
+		  </div>
   <div class="login">
      <div class="wrap">
            <div class="col_1_of_login span_1_of_login">
@@ -468,7 +1581,7 @@ components.signIn = `
         </div>
        </div>`
 
-components.signUp = `
+components.signUp =components.header + `
   <div class="register_account">
          <div class="wrap">
          <h4 class="title">Create an Account</h4>	
@@ -514,7 +1627,578 @@ components.signUp = `
      </div> 
    </div>
 `
-components.shop = `
+components.shop =`
+<div class="header-top">
+		<div class="wrap"> 
+		   <div class="logo">
+			   <a href="index.html"><img src="images/logo.png" alt=""/></a>
+		   </div>
+		   <div class="cssmenu">
+			  <ul>
+			  <li><a href="#" id="sign-up-link">Sign up</a></li> 
+			  <li><a href="#" id="shop">Store Locator</a></li> 
+			  <li><a href="#" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
+			  <li><a href="#" id="check-out">CheckOut</a></li>
+			  <li>   <button id="cart">
+			  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+			  Giỏ Hàng
+		  </button>
+		  <div id="myModal" class="modal">
+			  <div class="modal-content">
+				  <div class="modal-header">
+					  <h5 class="modal-title">Giỏ Hàng</h5>
+					  <span class="close">&times;</span>
+				  </div>
+				  <div class="modal-body">
+					  <div class="cart-row">
+						  <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+						  <span class="cart-price cart-header cart-column">Giá</span>
+						  <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+					  </div>
+					  <div class="cart-items">
+
+					  </div>
+					  <div class="cart-total">
+						  <strong class="cart-total-title">Tổng Cộng:</strong>
+						  <span class="cart-total-price">0VNĐ</span>
+					  </div>
+				  </div>
+
+				  <div class="modal-footer">
+					  <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+					  <button type="button" class="btn btn-primary order">Thanh Toán</button>
+				  </div>
+			  </div>
+		  </div></li>
+			  </ul>
+		   </div>
+		   <ul class="icon2 sub-icon2 profile_img">
+			   <li><a class="active-icon c2" href="#"> </a>
+				   <ul class="sub-icon2 list">
+					   <li><h3>Products</h3><a href=""></a></li>
+					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+				   </ul>
+			   </li>
+		   </ul>
+		   <div class="clear"></div>
+		</div>
+		</div>
+		<div class="header-bottom">
+			<div class="wrap">
+			  <!-- start header menu -->
+			<ul class="megamenu skyblue">
+			   <li><a class="color1" href="#" id="main">Home</a></li>
+			   <li class="grid"><a class="color2" href="#">Men</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">men</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <img src="images/nav_img.jpg" alt=""/>
+					   </div>
+				   </div>
+				   </li>
+					<li class="active grid"><a class="color4" href="#">Women</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							<div class="h_nav">
+							  <img src="images/nav_img1.jpg" alt=""/>
+							</div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>				
+				   <li><a class="color5" href="#">Kids</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <img src="images/nav_img2.jpg" alt=""/>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color6" href="#">Sale</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>	
+							   <div class="h_nav">
+								   <h4 class="top">my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color7" href="#">Customize</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="sign-in-link">login</a></li>
+									   <li><a href="#" id="sign-up-link">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>
+				   <li><a class="color8" href="#">Shop</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color9" href="#">Football</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>
+				   <li><a class="color10" href="#">Running</a></li>
+				   <li><a class="color11" href="#">Originals</a></li>
+				   <li><a class="color12" href="#">Basketball</a></li>
+				   
+			  </ul>
+			  <div class="clear"></div>
+			</div>
+		  </div>
        <div class="login">
          <div class="wrap">
      	    <div class="rsidebar span_1_of_left">
@@ -1174,7 +2858,7 @@ components.shop = `
 			</div>
 		   </div>
 	     `
-components.single = `  <div class="single">
+components.single =components.header + `  <div class="single">
 <div class="wrap">
 	<div class="rsidebar span_1_of_left">
 		  <section  class="sky-form">
@@ -1472,7 +3156,7 @@ $(window).load(function() {
 	   </div>
    </div>
 `
-components.checkout = ` <div class="login">
+components.checkout =components.header + ` <div class="login">
 <div class="wrap">
 	<h4 class="title">Shopping cart is empty</h4>
 	<p class="cart">You have no items in your shopping cart.<br>Click<a href="#" id="sign-in-link">here</a> to continue shopping</p>
