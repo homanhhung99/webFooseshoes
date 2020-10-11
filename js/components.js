@@ -1,4 +1,550 @@
 let components = {}
+components.headerProfile = `
+<div class="header-top">
+		<div class="wrap"> 
+		   <div class="logo">
+			   <a href="index.html"><img src="images/logo.png" alt=""/></a>
+		   </div>
+		   <div class="cssmenu">
+			  <ul>
+			  <li><a href="#" class="sign-up-btn" id="sign-up-link">Sign up</a></li> 
+			  <li><a href="#" class="shop-btn" id="shop">Store Locator</a></li> 
+			  <li><a href="#" class="sign-in-btn" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li>
+			  <li><a href="#" class="check-out" id="check-out">CheckOut</a></li>
+			  <li><button class="cart-btn" id="cart">
+			  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+			  Cart
+		  </button>
+		  </li>
+			  </ul>
+		   </div>
+		   <ul class="icon2 sub-icon2 profile_img">
+			   <li><a class="active-icon c2" href="#"> </a>
+				   <ul class="sub-icon2 list">
+					   <li><h3>Products</h3><a href=""></a></li>
+					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+				   </ul>
+			   </li>
+		   </ul>
+		   <div class="clear"></div>
+		</div>
+		</div>
+		<div class="header-bottom">
+			<div class="wrap">
+			  <!-- start header menu -->
+			<ul class="megamenu skyblue">
+			   <li><a class="color1" href="#" id="main">Home</a></li>
+			   <li class="grid"><a class="color2" href="#">Men</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">men</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <img src="images/nav_img.jpg" alt=""/>
+					   </div>
+				   </div>
+				   </li>
+					<li class="active grid"><a class="color4" href="#">Women</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							<div class="h_nav">
+							  <img src="images/nav_img1.jpg" alt=""/>
+							</div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>				
+				   <li><a class="color5" href="#">Kids</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <img src="images/nav_img2.jpg" alt=""/>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color6" href="#">Sale</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>	
+							   <div class="h_nav">
+								   <h4 class="top">my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color7" href="#">Customize</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="sign-in-link">login</a></li>
+									   <li><a href="#" id="sign-up-link">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>
+				   <li><a class="color8" href="#">Shop</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>style zone</h4>
+								   <ul>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">login</a></li>
+								   </ul>	
+							   </div>
+							   <div class="h_nav">
+								   <h4 class="top">man</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+				   </div>
+				   </li>
+				   <li><a class="color9" href="#">Football</a>
+				   <div class="megapanel">
+					   <div class="row">
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>shop</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>help</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>							
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>												
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>account</h4>
+								   <ul>
+									   <li><a href="#" id="shop">login</a></li>
+									   <li><a href="#" id="shop">create an account</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+									   <li><a href="#" id="shop">my shopping bag</a></li>
+									   <li><a href="#" id="shop">brands</a></li>
+									   <li><a href="#" id="shop">create wishlist</a></li>
+								   </ul>	
+							   </div>						
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>my company</h4>
+								   <ul>
+									   <li><a href="#" id="shop">trends</a></li>
+									   <li><a href="#" id="shop">sale</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+						   <div class="col1">
+							   <div class="h_nav">
+								   <h4>popular</h4>
+								   <ul>
+									   <li><a href="#" id="shop">new arrivals</a></li>
+									   <li><a href="#" id="shop">men</a></li>
+									   <li><a href="#" id="shop">women</a></li>
+									   <li><a href="#" id="shop">accessories</a></li>
+									   <li><a href="#" id="shop">kids</a></li>
+									   <li><a href="#" id="shop">style videos</a></li>
+								   </ul>	
+							   </div>
+						   </div>
+					   </div>
+					   <div class="row">
+						   <div class="col2"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+						   <div class="col1"></div>
+					   </div>
+					   </div>
+				   </li>
+				   <li><a class="color10" href="#">Running</a></li>
+				   <li><a class="color11" href="#">Originals</a></li>
+				   <li><a class="color12" href="#">Basketball</a></li>
+				   
+			  </ul>
+			  <div class="clear"></div>
+			</div>
+		  </div>`
 components.header = `
 <div class="header-top">
 		<div class="wrap"> 
@@ -10,7 +556,6 @@ components.header = `
 			  <li><a href="#" class="sign-up-btn" id="sign-up-link">Sign up</a></li> 
 			  <li><a href="#" class="shop-btn" id="shop">Store Locator</a></li> 
 			  <li><a href="#" class="sign-in-btn" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
-			  <li><a href="#" class="check-out" id="check-out">CheckOut</a></li>
 			  </ul>
 		   </div>
 		   <ul class="icon2 sub-icon2 profile_img">
@@ -671,7 +1216,7 @@ components.main =components.header +
 			<div class="grid_img">
 			  <div class="css3"><img src="images/pic.jpg" alt=""/></div>
 				 <div class="mask">
-					  <div class="info">Quick View</div>
+					  <div class="info single-btn" id="single-link">Quick View</div>
 				 </div>
 		   </div>
 		  <div class="price">£480</div>
@@ -694,7 +1239,7 @@ components.main =components.header +
 			 <li>
 				 <img src="images/plus.png" alt=""/>
 				 <ul class="icon1 sub-icon1 profile_img">
-				 <li><a class="active-icon c1" href="#">Add To Bag </a>
+				 <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 				   <ul class="sub-icon1 list">
 					   <li><h3>sed diam nonummy</h3><a href=""></a></li>
 					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -713,7 +1258,7 @@ components.main =components.header +
 		   <div class="grid_img">
 			  <div class="css3"><img src="images/pic1.jpg" alt=""/></div>
 				 <div class="mask">
-					  <div class="info">Quick View</div>
+					  <div class="info single-btn" id="single-link">Quick View</div>
 				 </div>
 		   </div>
 		  <div class="price">£480</div>
@@ -736,7 +1281,7 @@ components.main =components.header +
 			 <li>
 				 <img src="images/plus.png" alt=""/>
 				 <ul class="icon1 sub-icon1 profile_img">
-				 <li><a class="active-icon c1" href="#">Add To Bag </a>
+				 <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 				   <ul class="sub-icon1 list">
 					   <li><h3>sed diam nonummy</h3><a href=""></a></li>
 					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -755,7 +1300,7 @@ components.main =components.header +
 			<div class="grid_img">
 			  <div class="css3"><img src="images/pic2.jpg" alt=""/></div>
 				 <div class="mask">
-					  <div class="info">Quick View</div>
+					  <div class="info single-btn" id="single-link">Quick View</div>
 				 </div>
 		   </div>
 		  <div class="price">£480</div>
@@ -778,7 +1323,7 @@ components.main =components.header +
 			 <li>
 				 <img src="images/plus.png" alt=""/>
 				 <ul class="icon1 sub-icon1 profile_img">
-				 <li><a class="active-icon c1" href="#">Add To Bag </a>
+				 <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 				   <ul class="sub-icon1 list">
 					   <li><h3>sed diam nonummy</h3><a href=""></a></li>
 					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -800,7 +1345,7 @@ components.main =components.header +
 			<div class="grid_img">
 			  <div class="css3"><img src="images/pic3.jpg" alt=""/></div>
 				 <div class="mask">
-					  <div class="info">Quick View</div>
+					  <div class="info single-btn" id="single-link">Quick View</div>
 				 </div>
 		   </div>
 		  <div class="price">£480</div>
@@ -823,7 +1368,7 @@ components.main =components.header +
 			 <li>
 				 <img src="images/plus.png" alt=""/>
 				 <ul class="icon1 sub-icon1 profile_img">
-				 <li><a class="active-icon c1" href="#">Add To Bag </a>
+				 <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 				   <ul class="sub-icon1 list">
 					   <li><h3>sed diam nonummy</h3><a href=""></a></li>
 					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -842,7 +1387,7 @@ components.main =components.header +
 			<div class="grid_img">
 			  <div class="css3"><img src="images/pic4.jpg" alt=""/></div>
 				 <div class="mask">
-					  <div class="info">Quick View</div>
+					  <div class="info single-btn" id="single-link">Quick View</div>
 				 </div>
 		   </div>
 		  <div class="price">£480</div>
@@ -865,7 +1410,7 @@ components.main =components.header +
 			 <li>
 				 <img src="images/plus.png" alt=""/>
 				 <ul class="icon1 sub-icon1 profile_img">
-				 <li><a class="active-icon c1" href="#">Add To Bag </a>
+				 <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 				   <ul class="sub-icon1 list">
 					   <li><h3>sed diam nonummy</h3><a href=""></a></li>
 					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -884,7 +1429,7 @@ components.main =components.header +
 			<div class="grid_img">
 			  <div class="css3"><img src="images/pic5.jpg" alt=""/></div>
 				 <div class="mask">
-					  <div class="info">Quick View</div>
+					  <div class="info single-btn" id="single-link">Quick View</div>
 				 </div>
 		   </div>
 		  <div class="price">£480</div>
@@ -907,7 +1452,7 @@ components.main =components.header +
 			 <li>
 				 <img src="images/plus.png" alt=""/>
 				 <ul class="icon1 sub-icon1 profile_img">
-				 <li><a class="active-icon c1" href="#">Add To Bag </a>
+				 <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 				   <ul class="sub-icon1 list">
 					   <li><h3>sed diam nonummy</h3><a href=""></a></li>
 					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -1517,7 +2062,7 @@ components.signIn =`
                        </p>
                        <div class="message-error" id="password-error"></div>
                         <p id="login-form-remember">
-                           <label><a href="#" id="forgot-pass-link">Forget Your Password ? </a></label>
+                           <label><a href="#" class="forgot-btn" id="forgot-pass-link">Forget Your Password ? </a></label>
                         </p>
                         <p>
                            <input type="submit" value="Login" id="sign-in-btn">
@@ -1606,41 +2151,14 @@ components.shop =`
 		   </div>
 		   <div class="cssmenu">
 			  <ul>
-			  <li><a href="#" id="sign-up-link">Sign up</a></li> 
-			  <li><a href="#" id="shop">Store Locator</a></li> 
-			  <li><a href="#" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
-			  <li><a href="#" id="check-out">CheckOut</a></li>
-			  <li>   <button id="cart">
+			  <li><a href="#" class="sign-up-btn" id="sign-up-link">Sign up</a></li> 
+			  <li><a href="#" class="shop-btn" id="shop">Store Locator</a></li> 
+			  <li><a href="#" class="sign-in-btn" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li>
+			  <li><a href="#" class="check-out" id="check-out">CheckOut</a></li>
+			  <li><button class="cart-btn" id="cart">
 			  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
 			  Cart
-		  </button>
-		  <div id="myModal" class="modal">
-			  <div class="modal-content">
-				  <div class="modal-header">
-					  <h5 class="modal-title">Cart</h5>
-					  <span class="close">&times;</span>
-				  </div>
-				  <div class="modal-body">
-					  <div class="cart-row">
-						  <span class="cart-item cart-header cart-column">Product</span>
-						  <span class="cart-price cart-header cart-column">Price</span>
-						  <span class="cart-quantity cart-header cart-column">Amount</span>
-					  </div>
-					  <div class="cart-items">
-
-					  </div>
-					  <div class="cart-total">
-						  <strong class="cart-total-title">Total:</strong>
-						  <span class="cart-total-price">0$</span>
-					  </div>
-				  </div>
-
-				  <div class="modal-footer">
-					  <button type="button" class="btn btn-secondary close-footer">Closed</button>
-					  <button type="button" class="btn btn-primary order">Pay</button>
-				  </div>
-			  </div>
-		  </div></li>
+		  </li>
 			  </ul>
 		   </div>
 		   <ul class="icon2 sub-icon2 profile_img">
@@ -2317,7 +2835,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic11.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2340,7 +2858,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2359,7 +2877,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic10.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2382,7 +2900,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2401,7 +2919,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic9.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2424,7 +2942,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2446,7 +2964,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic3.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2469,7 +2987,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2488,7 +3006,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic4.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2511,7 +3029,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2530,7 +3048,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic5.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2553,7 +3071,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2575,7 +3093,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic6.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2598,7 +3116,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2617,7 +3135,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic7.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2640,7 +3158,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2659,7 +3177,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic8.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2682,7 +3200,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2704,7 +3222,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic2.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2727,7 +3245,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2746,7 +3264,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic1.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2769,7 +3287,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2788,7 +3306,7 @@ components.shop =`
 				         <div class="grid_img">
 						   <div class="css3"><img src="images/pic.jpg" alt=""/></div>
 					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
+	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
                        <div class="price">£480</div>
@@ -2811,7 +3329,7 @@ components.shop =`
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2829,304 +3347,6 @@ components.shop =`
 			</div>
 		   </div>
 	     `
-components.single =components.header + `  <div class="single">
-<div class="wrap">
-	<div class="rsidebar span_1_of_left">
-		  <section  class="sky-form">
-				<h4>Occasion</h4>
-			   <div class="row row1 scroll-pane">
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Athletic (20)</label>
-				   </div>
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Athletic Shoes (48)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Casual (45)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Casual (45)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other (1)</label>
-				   </div>
-				</div>
-				<h4>Category</h4>
-			   <div class="row row1 scroll-pane">
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Flats (70)</label>
-				   </div>
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Athletic Shoes (48)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Athletic Shoes (48)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Heels (38)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other (1)</label>
-				   </div>
-			   </div>
-			 <h4>Styles</h4>
-			   <div class="row row1 scroll-pane">
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Athletic (20)</label>
-				   </div>
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Ballerina (5)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Pumps (7)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>High Tops (2)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Other (1)</label>
-				   </div>
-			   </div>
-		 </section>
-		 <section  class="sky-form">
-		   <h4>Brand</h4>
-			   <div class="row row1 scroll-pane">
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Adidas by Stella McCartney</label>
-				   </div>
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Asics</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Bloch</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Bloch Kids</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Capezio</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>Capezio Kids</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Nike</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Zumba</label>
-				   </div>
-			   </div>
-		</section>
-		<section  class="sky-form">
-		   <h4>Heel Height</h4>
-			   <div class="row row1 scroll-pane">
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Flat (20)</label>
-				   </div>
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Under 1in(5)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>1in - 1 3/4 in(5)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>2in - 2 3/4 in(3)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox" ><i></i>3in - 3 3/4 in(2)</label>
-				   </div>
-			   </div>
-	   </section>
-	   <section  class="sky-form">
-		   <h4>Price</h4>
-			   <div class="row row1 scroll-pane">
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>$50.00 and Under (30)</label>
-				   </div>
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$100.00 and Under (30)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$200.00 and Under (30)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$300.00 and Under (30)</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>$400.00 and Under (30)</label>
-				   </div>
-			   </div>
-	   </section>
-	   <section  class="sky-form">
-		   <h4>Colors</h4>
-			   <div class="row row1 scroll-pane">
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Red</label>
-				   </div>
-				   <div class="col col-4">
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i></label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Black</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Yellow</label>
-					   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>Orange</label>
-				   </div>
-			   </div>
-	   </section>
-</div>
-<div class="cont span_2_of_3">
-	 <div class="labout span_1_of_a1">
-	   <!-- start product_slider -->
-			<ul id="etalage">
-				   <li>
-					   <a href="optionallink.html">
-						   <img class="etalage_thumb_image" src="images/t1.jpg" />
-						   <img class="etalage_source_image" src="images/t2.jpg" />
-					   </a>
-				   </li>
-				   <li>
-					   <img class="etalage_thumb_image" src="images/t2.jpg" />
-					   <img class="etalage_source_image" src="images/t2.jpg" />
-				   </li>
-				   <li>
-					   <img class="etalage_thumb_image" src="images/t3.jpg" />
-					   <img class="etalage_source_image" src="images/t3.jpg" />
-				   </li>
-				   <li>
-					   <img class="etalage_thumb_image" src="images/t4.jpg" />
-					   <img class="etalage_source_image" src="images/t4.jpg" />
-				   </li>
-				   <li>
-					   <img class="etalage_thumb_image" src="images/t5.jpg" />
-					   <img class="etalage_source_image" src="images/t5.jpg" />
-				   </li>
-				   <li>
-					   <img class="etalage_thumb_image" src="images/t6.jpg" />
-					   <img class="etalage_source_image" src="images/t6.jpg" />
-				   </li>
-				   <li>
-					   <img class="etalage_thumb_image" src="images/t1.jpg" />
-					   <img class="etalage_source_image" src="images/t1.jpg" />
-				   </li>
-			   </ul>
-		   
-		   
-   <!-- end product_slider -->
-   </div>
-   <div class="cont1 span_2_of_a1">
-	   <h3 class="m_3">Lorem ipsum dolor sit amet</h3>
-	   
-	   <div class="price_single">
-					 <span class="reducedfrom">$66.00</span>
-					 <span class="actual" id="valueProduct">$12.00</span><a href="#">click for offer</a>
-				   </div>
-	   <ul class="options">
-		   <h4 class="m_9">Select a Size</h4>
-		   <li><a href="#">6</a></li>
-		   <li><a href="#">7</a></li>
-		   <li><a href="#">8</a></li>
-		   <li><a href="#">9</a></li>
-		   <div class="clear"></div>
-	   </ul>
-	   <div class="btn_form">
-		  <form>
-			<input type="submit" value="buy now" title="" id="buyNow">
-		 </form>
-	   </div>
-	   <ul class="add-to-links">
-		  <li><img src="images/wish.png" alt=""/><a href="#">Add to wishlist</a></li>
-	   </ul>
-	   <p class="m_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-	   
-	   <div class="social_single">	
-		  <ul>	
-			 <li class="fb"><a href="#"><span> </span></a></li>
-			 <li class="tw"><a href="#"><span> </span></a></li>
-			 <li class="g_plus"><a href="#"><span> </span></a></li>
-			 <li class="rss"><a href="#"><span> </span></a></li>		
-		  </ul>
-	   </div>
-   </div>
-   <div class="clear"></div>
-
-
-<ul id="flexiselDemo3">
-   <li><img src="images/pic11.jpg" /><div class="grid-flex"><a href="#">Bloch</a><p>Rs 850</p></div></li>
-   <li><img src="images/pic10.jpg" /><div class="grid-flex"><a href="#">Capzio</a><p>Rs 850</p></div></li>
-   <li><img src="images/pic9.jpg" /><div class="grid-flex"><a href="#">Zumba</a><p>Rs 850</p></div></li>
-   <li><img src="images/pic8.jpg" /><div class="grid-flex"><a href="#">Bloch</a><p>Rs 850</p></div></li>
-   <li><img src="images/pic7.jpg" /><div class="grid-flex"><a href="#">Capzio</a><p>Rs 850</p></div></li>
-</ul>
-<script type="text/javascript">
-$(window).load(function() {
-   $("#flexiselDemo1").flexisel();
-   $("#flexiselDemo2").flexisel({
-	   enableResponsiveBreakpoints: true,
-	   responsiveBreakpoints: { 
-		   portrait: { 
-			   changePoint:480,
-			   visibleItems: 1
-		   }, 
-		   landscape: { 
-			   changePoint:640,
-			   visibleItems: 2
-		   },
-		   tablet: { 
-			   changePoint:768,
-			   visibleItems: 3
-		   }
-	   }
-   });
-
-   $("#flexiselDemo3").flexisel({
-	   visibleItems: 5,
-	   animationSpeed: 1000,
-	   autoPlay: true,
-	   autoPlaySpeed: 3000,    		
-	   pauseOnHover: true,
-	   enableResponsiveBreakpoints: true,
-	   responsiveBreakpoints: { 
-		   portrait: { 
-			   changePoint:480,
-			   visibleItems: 1
-		   }, 
-		   landscape: { 
-			   changePoint:640,
-			   visibleItems: 2
-		   },
-		   tablet: { 
-			   changePoint:768,
-			   visibleItems: 3
-		   }
-	   }
-   });
-   
-});
-</script>
-<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-<div class="toogle">
-<h3 class="m_3">Product Details</h3>
-<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-</div>					
-<div class="toogle">
-<h3 class="m_3">Product Reviews</h3>
-<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-</div>
-<div class="footer">
-   <div class="footer-top">
-	  <div class="wrap">
-			 <div class="col_1_of_footer-top span_1_of_footer-top">
-			  <ul class="f_list">
-				  <li><img src="images/f_icon.png" alt=""/><span class="delivery">Free delivery on all orders over £100*</span></li>
-			  </ul>
-		  </div>
-		  <div class="col_1_of_footer-top span_1_of_footer-top">
-			 <ul class="f_list">
-				  <li><img src="images/f_icon1.png" alt=""/><span class="delivery">Customer Service :<span class="orange"> (800) 000-2587 (freephone)</span></span></li>
-			  </ul>
-		  </div>
-		  <div class="col_1_of_footer-top span_1_of_footer-top">
-			 <ul class="f_list">
-				  <li><img src="images/f_icon2.png" alt=""/><span class="delivery">Fast delivery & free returns</span></li>
-			  </ul>
-		  </div>
-		 <div class="clear"></div>
-	</div>
-	  </div>
-	  <div class="footer-middle">
-		 <div class="wrap">
-		   <div class="section group">
-	   <div class="col_1_of_middle span_1_of_middle">
-		   <dl id="sample" class="dropdown">
-		   <dt><a href="#"><span>Please Select a Country</span></a></dt>
-		   <dd>
-			   <ul>
-				   <li><a href="#">Australia<img class="flag" src="images/as.png" alt="" /><span class="value">AS</span></a></li>
-				   <li><a href="#">Sri Lanka<img class="flag" src="images/srl.png" alt="" /><span class="value">SL</span></a></li>
-				   <li><a href="#">Newziland<img class="flag" src="images/nz.png" alt="" /><span class="value">NZ</span></a></li>
-				   <li><a href="#">Pakistan<img class="flag" src="images/pk.png" alt="" /><span class="value">Pk</span></a></li>
-				   <li><a href="#">United Kingdom<img class="flag" src="images/uk.png" alt="" /><span class="value">UK</span></a></li>
-				   <li><a href="#">United States<img class="flag" src="images/us.png" alt="" /><span class="value">US</span></a></li>
-			   </ul>
-			</dd>
-			  </dl>
-		   </div>
-	   <div class="col_1_of_middle span_1_of_middle">
-		   <ul class="f_list1">
-			   <li><span class="m_8">Sign up for email and Get 15% off</span>
-			   <div class="search">	  
-				   <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-				   <input type="submit" value="Subscribe" id="submit" name="submit">
-				   <div id="response"> </div>
-				</div><div class="clear"></div>
-				</li>
-		   </ul>
-	   </div>
-	   <div class="clear"></div>
-	  </div>
-	   </div>
-   </div>
-`
 components.checkout =components.header + ` <div class="login">
 <div class="wrap">
 	<h4 class="title">Shopping cart is empty</h4>
@@ -3154,4 +3374,195 @@ components.checkout =components.header + ` <div class="login">
 		 <div class="clear"></div>
 	</div>
    </div>
+`
+components.forgotpass =components.header+ `
+<div class="container" style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-6 col-md-offset-6">
+	<div class="panel panel-default">
+	  <div class="panel-body">
+		<div class="text-center">
+		  <h3><i class="fa fa-lock fa-4x"></i></h3>
+		  <h2 class="text-center">Forgot Password?</h2>
+		  <p>You can reset your password here.</p>
+		  <div class="panel-body">
+			<form id="form-forgot-pass" class="form">
+			<fieldset>
+			  <div class="form-group">
+			  <div class="input-group">
+				<span><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+				
+				<input id="email" placeholder="email address" class="form-control" type="email" oninvalid="setCustomValidity('Please enter a valid email address!')" onchange="try{setCustomValidity('')}catch(e){}" required="">
+			  </div>
+			  <div class="message-error" id="emailForgot-error"></div>
+			  </div>
+			  <div class="form-group">
+			  <input id ="send-pass-btn" class="btn btn-secondary btn-block" value="Send My Password" type="submit">
+			  </div>
+			</fieldset>
+			</form>
+			
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+		<div class="col-md-6 col-md-offset-6">
+		  <div class="sign">
+			<a href="" class="sign-in-btn" id="sign-in-link">Sign In</a>
+			<a href="" class="sign-up-btn" id="sign-Up-link">Sign Up</a>
+		  </div>
+		</div>
+</div>
+</div>`
+components.cart = components.headerProfile +	 `
+<div class="container"> 
+  <div>CART<span id="countProduct"></span></div>
+ <table id="cart" class="table table-hover table-condensed"> 
+  <thead> 
+   <tr> 
+    <th style="width:50%">Name Product</th> 
+    <th style="width:10%">Price</th> 
+    <th style="width:8%">Amount</th> 
+    <th style="width:22%" class="text-center">Into money</th> 
+    <th style="width:10%"> </th> 
+   </tr> 
+  </thead> 
+  <tbody><tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="https://firebasestorage.googleapis.com/v0/b/webfooseshoes.appspot.com/o/pic1.jpg?alt=media&token=e9658635-5fb4-4710-91a6-a7d735865c1e" alt="Product 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">Product 1</h4> 
+      <p>Description of Product 1</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">200.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">200.000 đ</td> 
+   <td class="actions" data-th="">
+    
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
+    </button>
+   </td> 
+  </tr> 
+  <tr> 
+   <td data-th="Product"> 
+    <div class="row"> 
+     <div class="col-sm-2 hidden-xs"><img src="https://firebasestorage.googleapis.com/v0/b/webfooseshoes.appspot.com/o/pic2.jpg?alt=media&token=a1f89fb8-daba-43ed-b222-d7468be3c33e" alt="Product 1" class="img-responsive" width="100">
+     </div> 
+     <div class="col-sm-10"> 
+      <h4 class="nomargin">Product 2</h4> 
+      <p>Description of Product 2</p> 
+     </div> 
+    </div> 
+   </td> 
+   <td data-th="Price">300.000 đ</td> 
+   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+   </td> 
+   <td data-th="Subtotal" class="text-center">300.000 đ</td> 
+   <td class="actions" data-th="">
+    </button> 
+    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
+    </button>
+   </td> 
+  </tr> 
+  </tbody><tfoot> 
+    
+   <tr> 
+    <td><a href="#" class="btn btn-warning" id="back-shop"><i class="fa fa-angle-left"></i> Back shop</a>
+    </td> 
+    <td colspan="2" class="hidden-xs"> </td> 
+    <td class="hidden-xs text-center"><span style="font-weight: bold;">Total money:</span> <strong id="Total">500.000 đ</strong>
+    </td> 
+    <td><a id="order-link" href="#" class="btn btn-success btn-block order-btn">Order <i class="fa fa-angle-right"></i></a>
+    </td> 
+   </tr> 
+  </tfoot> 
+ </table>
+</div>`
+
+components.inforDataProduct = components.headerProfile+ `
+<div class="container">
+<div class="row">
+	<div class="col-md-8">
+		<form id="form-inforDataProduct">
+			<div class="form-row">
+			  <div class="col-md-4 mb-3">
+				<label for="validationServer01">First name</label>
+				<input type="text" class="form-control " id="validationServer01" placeholder="First name" required>
+				<span></span>
+				<div class="valid-feedback">
+				  Looks good!
+				</div>
+			  </div>
+			  <div class="col-md-4 mb-3">
+				<label for="validationServer02">Last name</label>
+				<input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" required>
+				<div class="valid-feedback">
+				  Looks good!
+				</div>
+			  </div>
+			  <div class="col-md-4 mb-3">
+				<label for="validationServerUsername">Phone</label>
+				<div class="input-group">
+				  <div class="input-group-prepend">
+					<span class="input-group-text" id="inputGroupPrepend3"><i class="fa fa-phone"></i></span>
+				  </div>
+				  <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+				  <div class="invalid-feedback">
+					Please choose a username.
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="form-row">
+			  <div class="col-md-6 mb-3">
+				<label for="validationServer03">Address</label>
+				<input type="text" class="form-control is-invalid" id="validationServer03" required>
+				<div class="invalid-feedback">
+				  Please provide a valid city.
+				</div>
+			  </div>
+			  <div class="col-md-3 mb-3">
+				<label for="validationServer04">City</label>
+				<select class="custom-select is-invalid" id="validationServer04" required>
+				  <option selected disabled value="">Choose...</option>
+				  <option>...</option>
+				</select>
+				<div class="invalid-feedback">
+				  Please select a valid state.
+				</div>
+			  </div>
+			  <div class="col-md-3 mb-3">
+				<label for="validationServer05">Zip</label>
+				<input type="text" class="form-control is-invalid" id="validationServer05" required>
+				<div class="invalid-feedback">
+				  Please provide a valid zip.
+				</div>
+			  </div>
+			</div>
+			<div class="form-group">
+			  <div class="form-check">
+				<input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+				<label class="form-check-label" for="invalidCheck3">
+				  Agree to terms and conditions
+				</label>
+				<div class="invalid-feedback">
+				  You must agree before submitting.
+				</div>
+			  </div>
+			</div>
+			<button class="btn btn-primary" type="submit">Submit form</button>
+		  </form>
+</div>
+<div class="col-md-4">
+	 <img src="./images/729794-1_02.jpg" style="width: 208px;" alt="">
+</div>
+</div>
+</div>
 `

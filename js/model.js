@@ -1,32 +1,12 @@
 let model = {
-    currentUserData: {
-        email: "",
-        name: "",
-        balance: 0
-    },
-}
-let product = {
-    id: "",
-    name: "",
-    price: "",
-    details: ""
+    listProduct:[],
+    listInforData:[]
 }
 
-model.saveCurrentUserData = function (userData) {
-    model.currentUserData = userData
+model.saveCurrentProductData = function (productData) {
+    model.listProduct = productData
 }
-
-model.saveGuestData = function (userData) {
-    model.guestData = userData
+model.saveCurrentInforData = function(infor)
+{
+    model.listInforData = infor
 }
-
-model.saveProduct = function (ideaDataProduct) {
-    let refinedIdeaDataProduct = refineData(ideaDataProduct);
-    let newIdeaProduct = {
-        id: ideaDataProduct.id,
-        name: refinedIdeaDataProduct.name,
-        price: refinedIdeaDataProduct.price
-    };
-    model.ideas.push(newIdea);
-}
-

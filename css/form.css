@@ -180,3 +180,28 @@
 	float: left;
 	height: 100%;
 }
+
+.sign a
+{
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    background: #bcbcbc;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    display: block;
+    margin: 10px;
+}
+.sign
+{
+    text-align: center;
+    margin-top: 100px;
+}
+.sign a:hover
+{
+    background-color: #616161;
+    color: white;
+}

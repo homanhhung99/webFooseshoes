@@ -24,8 +24,6 @@ view.setUpPageViewBtn = async function (classBtn, namePage) {
         for (let i = 0; i < allBtn.length; i++) {
             allBtn[i].onclick = async function () {
                 await view.showScreen(namePage)
-                if (namePage == "shop") {
-                }
             }
         }
     }
@@ -35,6 +33,8 @@ view.makeAllBtnShow = function () {
     view.setUpPageViewBtn("sign-in-btn", "signIn")
     view.setUpPageViewBtn("shop-btn", "shop")
     view.setUpPageViewBtn("forgot-btn", "forgotPass")
+    view.setUpPageViewBtn("cart-btn", "cart")
+    view.setUpPageViewBtn("order-btn", "order")
 }
 view.showScreen = async function (screenName) {
     let content = document.getElementById('content')
@@ -95,63 +95,81 @@ view.showScreen = async function (screenName) {
             break;
         case 'forgotPass':
             content.innerHTML = components.forgotpass
-            break;
-        case 'updatePass':
-            let newPass = document.getElementById("newPass")
-            let validateResult = [
-                view.validate(newPass != "", "password-error", "input password"),
-                view.validate(passwordConfirmation != "" && password == passwordConfirmation, "password-confirmation-error", "Password confirmation is not match")
-            ]
-            if (isPassed(validateResult)) {
-                controller.updatePassword(newPass)
-            }
-            break;
-        case 'shop':
-            content.innerHTML = components.shop
-
-
-            //CHỨC NĂNG GIỎ HÀNG
-
-            //Khai báo DOM
-            let showCart = document.getElementById("cart") //Nút giỏ hàng
-            var modal = document.getElementById("myModal"); //Modal giỏ hàng 
-            var close = document.getElementsByClassName("close")[0]; //Nút close X trong modal giỏ hàng
-            var close_footer = document.getElementsByClassName("close-footer")[0]; //Nút "đóng" trong modal giỏ hàng
-            var order = document.getElementsByClassName("order")[0]; //Nút "thanh toán" trong modal giỏ hàng
-
-            //Xử lý khi click vào nút giỏ hàng hiển thị modal giỏ hàng => hiên thị model từ "none" sang "block"
-            showCart.onclick = function () {
-                modal.style.display = "block";
-            }
-
-            //Xử lý việc đóng (close) modal giỏ hàng => hiên thị model từ "block" sang "none"
-            close.onclick = function () {
-                modal.style.display = "none";
-            }
-            close_footer.onclick = function () {
-                modal.style.display = "none";
-            }
-            window.onclick = function (event) {
-                //For test
-                console.log(event.target) //event.target sẽ hiển thị thẻ mà chuột click vào
-                //End test
-                if (event.target === modal) {   
-                    modal.style.display = "none";
+            let formForgotPass = document.getElementById('form-forgot-pass')
+            formForgotPass.onsubmit = function(event)
+            {
+                console.log(formForgotPass)
+                event.preventDefault()
+                let email = formForgotPass.email.value.trim()
+                let validateResult = [
+                    view.validate(email != "" && validateEmail(email), "emailForgot-error", "Invalid email")
+                ]
+                if(isPassed(validateResult)){
+                    controller.forgotPass(email)
                 }
             }
-            //Xử lý khi ấn nút thanh toán trong modal giỏ hàng
-            order.onclick = function () {
-                alert("Cảm ơn bạn đã thanh toán đơn hàng")
+            view.makeAllBtnShow()
+            break;
+        // case 'updatePass':
+        //     let newPass = document.getElementById("newPass")
+        //     let validateResult = [
+        //         view.validate(newPass != "", "password-error", "input password"),
+        //         view.validate(passwordConfirmation != "" && password == passwordConfirmation, "password-confirmation-error", "Password confirmation is not match")
+        //     ]
+        //     if (isPassed(validateResult)) {
+        //         controller.updatePassword(newPass)
+        //     }
+        //     break;
+        case 'shop':
+            content.innerHTML = components.shop
+            view.makeAllBtnShow()
+            let addToCart = document.getElementById("add-to-cart")
+            addToCart.onclick = function()
+            {
+
             }
-            //CHỨC NĂNG ĐĂNG XUẤT
+            await controller.loadData()
+            console.log("load xong")
+            //thoát tài khoản
             let checkOut = document.getElementById("check-out")
             checkOut.onclick = function () {
                 controller.checkOut()
-                content.innerHTML = components.checkout
             }
             break;
-        case 'single':
-            content.innerHTML = components.single
+        case 'cart':
+            content.innerHTML = components.cart
+            let backShop = document.getElementById("back-shop")
+            backShop.onclick = function()
+            {
+                view.showScreen("shop")
+            }
+            view.makeAllBtnShow()
             break;
+        case 'order':
+            content.innerHTML = components.inforDataProduct
+            let formOrder = document.getElementById("form-inforDataProduct")
+            formOrder.onsubmit = function(event)
+            {
+                event.preventDefault()
+                let firstName = formOrder.firstName.value.trim()
+                let lastName = formOrder.lastName.value.trim()
+                let phone = formOrder.phone.value.trim()
+                let address = formOrder.address.value.trim()
+                let city = formOrder.city.value.trim()
+                let zip = formOrder.zip.value.trim()
+                
+                let validateResult = [
+                    view.validate(firstName != "", "firstName-error", "Please enter your first name!"),
+                    view.validate(lastName != "", "lastName-error", "Please enter your last name!"),
+                    view.validate(phone != "", "phone-error", "Please enter your phone"),
+                    view.validate(address != "", "address-error", "Please provide a valid Address."),
+                    view.validate(city != "", "city-error", "Please select a valid city."),
+                    view.validate(zip != "", "zip-error", "Please provide a valid zip."),
+                ]
+                if(isPassed(validateResult)){
+                    controller.order()
+                }
+            }
+            view.makeAllBtnShow()
     }
 }

@@ -23,7 +23,6 @@ controller.signIn = async function (email, password){
     let cart = document.getElementById("cart")
     try{
         await firebase.auth().signInWithEmailAndPassword(email, password)
-        cart.style.opacity = "1"
         console.log(firebase.auth().currentUser.displayName)
     }catch(error)
     {
@@ -32,21 +31,72 @@ controller.signIn = async function (email, password){
     }
 }
 
-controller.Shop = async function (count, id){
-
+controller.loadData = async function()
+{
+    let result = await firebase.firestore().collection('Products').get()
+    let data = []
+    for(let doc of result.docs){
+        // console.log(result)
+        // console.log(refineData(doc))
+        data.push(refineData(doc))
+        console.log(data)
+    }
+    return data
 }
+// controller.addInforProduct = async function()
+// {
+//     let resultProduct = await firebase.firestore().collection('Products')
+//     let data = []
+//     for(let doc of resultProduct.docs){
+//         data.push(refineData(doc))
+//     }
+//     try
+//     {
+//         let currentEmail = firebase.auth().currentUser.email;
+//         if (friendEmail == currentEmail) {
+//             let newdataProduct = {
+//                 nameProduct: 
+//             }
+//         }
+//     }
+// }
+controller.order = async function(inforProduct,firstName,lastName,phone,address,city,zip)
+{
 
-//DONE
+    try{
+        if(firebase.auth().currentUser.email != null)
+        {
+            let currentData = {
+                inforProduct = inforProduct,
+                firstName = firstName,
+                lastName = lastName,
+                phone = phone,
+                address = address,
+                city = city,
+                zip = zip,
+                createdAt: new Date().toLocaleString()
+            }
+            await firebase.firestore().collection("data").add(currentData);
+        }  
+    }catch(error)
+    {
+        view.setText("chose-error","Email successfully sent!")
+    }
+   
+}
 controller.forgotPass = async function (email){
-    view.setText("email-error","")
-    view.setActive("email-btn",false)
+    view.setText("emailForgot-error","")
+    view.setActive("send-pass-btn",false)
+
     try{
         await firebase.auth().sendPasswordResetEmail(email)
+        view.setText("emailForgot-error","Email successfully sent!")
         console.log("Gửi email reset pass thành công")
     }
     catch(error)
     {
-        view.setText("email-error","email-error")
+        view.setText("emailForgot-error",error.message)
+        view.setActive("send-pass-btn",true)
         console.log("Lỗi khi gửi email reset pass.",error)
     }
 }
@@ -59,5 +109,11 @@ controller.forgotPass = async function (email){
 
 // }
 controller.checkOut = async function (){
-    await firebase.auth().signOut();
+    try{
+
+        await firebase.auth().signOut();
+    }catch(error)
+    {
+        console.log(error)
+    }
 }
