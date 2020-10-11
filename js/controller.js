@@ -39,7 +39,7 @@ controller.loadData = async function()
         // console.log(result)
         // console.log(refineData(doc))
         data.push(refineData(doc))
-        console.log(data)
+        // console.log(data)
     }
     return data
 }
@@ -60,30 +60,30 @@ controller.loadData = async function()
 //         }
 //     }
 // }
-controller.order = async function(inforProduct,firstName,lastName,phone,address,city,zip)
-{
+// controller.order = async function(inforProduct,firstName,lastName,phone,address,city,zip)
+// {
 
-    try{
-        if(firebase.auth().currentUser.email != null)
-        {
-            let currentData = {
-                inforProduct = inforProduct,
-                firstName = firstName,
-                lastName = lastName,
-                phone = phone,
-                address = address,
-                city = city,
-                zip = zip,
-                createdAt: new Date().toLocaleString()
-            }
-            await firebase.firestore().collection("data").add(currentData);
-        }  
-    }catch(error)
-    {
-        view.setText("chose-error","Email successfully sent!")
-    }
+//     try{
+//         if(firebase.auth().currentUser.email != null)
+//         {
+//             let currentData = {
+//                 inforProduct = inforProduct,
+//                 firstName = firstName,
+//                 lastName = lastName,
+//                 phone = phone,
+//                 address = address,
+//                 city = city,
+//                 zip = zip,
+//                 createdAt: new Date().toLocaleString()
+//             }
+//             await firebase.firestore().collection("data").add(currentData);
+//         }  
+//     }catch(error)
+//     {
+//         view.setText("chose-error","Email successfully sent!")
+//     }
    
-}
+// }
 controller.forgotPass = async function (email){
     view.setText("emailForgot-error","")
     view.setActive("send-pass-btn",false)

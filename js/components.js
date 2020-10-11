@@ -7,7 +7,6 @@ components.headerProfile = `
 		   </div>
 		   <div class="cssmenu">
 			  <ul>
-			  <li><a href="#" class="sign-up-btn" id="sign-up-link">Sign up</a></li> 
 			  <li><a href="#" class="shop-btn" id="shop">Store Locator</a></li> 
 			  <li><a href="#" class="sign-in-btn" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li>
 			  <li><a href="#" class="check-out" id="check-out">CheckOut</a></li>
@@ -1501,7 +1500,6 @@ components.signIn =`
 			  <li><a href="#" class="sign-up-btn" id="sign-up-link">Sign up</a></li> 
 			  <li><a href="#" class="shop-btn" id="shop">Store Locator</a></li> 
 			  <li><a href="#" class="sign-in-btn" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li> 
-			  <li><a href="#" class="check-out" id="check-out">CheckOut</a></li>
 			  <li>   
 		  </div></li>
 			  </ul>
@@ -2151,10 +2149,9 @@ components.shop =`
 		   </div>
 		   <div class="cssmenu">
 			  <ul>
-			  <li><a href="#" class="sign-up-btn" id="sign-up-link">Sign up</a></li> 
 			  <li><a href="#" class="shop-btn" id="shop">Store Locator</a></li> 
 			  <li><a href="#" class="sign-in-btn" id="sign-in-link">My Account<span id="myNameAccount"></span></a></li>
-			  <li><a href="#" class="check-out" id="check-out">CheckOut</a></li>
+			  <li><a href="#" class="check-out-btn" id="check-out">CheckOut</a></li>
 			  <li><button class="cart-btn" id="cart">
 			  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
 			  Cart
@@ -2854,11 +2851,11 @@ components.shop =`
 				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
 		        	  (45)
 		    	      </span>
-						 <ul class="list2">
+						 <ul class="list2" id="add-to-cart1">
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#">Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -2896,11 +2893,11 @@ components.shop =`
 				        <label for="rating-input-1-1" class="rating-star"></label>&nbsp;
 		        	  (45)
 		    	      </span>
-						 <ul class="list2">
+						 <ul class="list2" id="add-to-cart2">
 						  <li>
 						  	<img src="images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
+							  <li><a class="active-icon c1" href="#" >Add To Bag </a>
 								<ul class="sub-icon1 list">
 									<li><h3>sed diam nonummy</h3><a href=""></a></li>
 									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -3428,7 +3425,7 @@ components.cart = components.headerProfile +	 `
     <th style="width:10%"> </th> 
    </tr> 
   </thead> 
-  <tbody><tr> 
+  <tbody id="show-list-carts"><tr> 
    <td data-th="Product"> 
     <div class="row"> 
      <div class="col-sm-2 hidden-xs"><img src="https://firebasestorage.googleapis.com/v0/b/webfooseshoes.appspot.com/o/pic1.jpg?alt=media&token=e9658635-5fb4-4710-91a6-a7d735865c1e" alt="Product 1" class="img-responsive" width="100">
@@ -3444,7 +3441,6 @@ components.cart = components.headerProfile +	 `
    </td> 
    <td data-th="Subtotal" class="text-center">200.000 đ</td> 
    <td class="actions" data-th="">
-    
     </button> 
     <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
     </button>

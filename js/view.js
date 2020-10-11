@@ -28,11 +28,15 @@ view.setUpPageViewBtn = async function (classBtn, namePage) {
         }
     }
 }
+
 view.makeAllBtnShow = function () {
     view.setUpPageViewBtn("sign-up-btn", "signUp")
     view.setUpPageViewBtn("sign-in-btn", "signIn")
-    view.setUpPageViewBtn("shop-btn", "shop")
     view.setUpPageViewBtn("forgot-btn", "forgotPass")
+}
+view.makeProfile = function()
+{
+    view.setUpPageViewBtn("shop-btn", "shop")
     view.setUpPageViewBtn("cart-btn", "cart")
     view.setUpPageViewBtn("order-btn", "order")
 }
@@ -122,14 +126,21 @@ view.showScreen = async function (screenName) {
         //     break;
         case 'shop':
             content.innerHTML = components.shop
-            view.makeAllBtnShow()
-            let addToCart = document.getElementById("add-to-cart")
-            addToCart.onclick = function()
+            view.makeProfile()
+            let addToCart1 = document.getElementById("add-to-cart1")
+            let addToCart2 = document.getElementById("add-to-cart2")
+            let data =  await controller.loadData()
+            // console.log(data)//Lấy dữ liệu data về
+            addToCart1.onclick = function()
             {
-
+                model.saveCurrentProductData(data[0])
+                console.log(model.listProduct)
             }
-            await controller.loadData()
-            console.log("load xong")
+            addToCart2.onclick = function()
+            {
+                model.saveCurrentProductData(data[0])
+                console.log(model.listProduct)
+            }   
             //thoát tài khoản
             let checkOut = document.getElementById("check-out")
             checkOut.onclick = function () {
@@ -138,15 +149,16 @@ view.showScreen = async function (screenName) {
             break;
         case 'cart':
             content.innerHTML = components.cart
+            view.makeProfile()
             let backShop = document.getElementById("back-shop")
             backShop.onclick = function()
             {
                 view.showScreen("shop")
             }
-            view.makeAllBtnShow()
             break;
         case 'order':
             content.innerHTML = components.inforDataProduct
+            view.makeProfile()
             let formOrder = document.getElementById("form-inforDataProduct")
             formOrder.onsubmit = function(event)
             {
@@ -170,6 +182,37 @@ view.showScreen = async function (screenName) {
                     controller.order()
                 }
             }
-            view.makeAllBtnShow()
+            break;
     }
 }
+// view.showCarts = function()
+// {
+//     let showListCarts = document.getElementById("show-list-carts")
+//     showListCarts.innerHTML =""
+//     for(let data of model.listProduct){
+//         let html = `
+//         <tr id="${data.id}"> 
+//         <td data-th="Product"> 
+//          <div class="row"> 
+//           <div class="col-sm-2 hidden-xs"><img src="${data.urlImg}">
+//           </div> 
+//           <div class="col-sm-10"> 
+//            <h4 class="nomargin">${data.nameProduct}</h4> 
+//            <p>Description of Product 1</p> 
+//           </div> 
+//          </div> 
+//         </td> 
+//         <td data-th="Price">${data.price}</td> 
+//         <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+//         </td> 
+//         <td data-th="Subtotal" class="text-center">${data.price}</td> 
+//         <td class="actions" data-th="">
+//          </button> 
+//          <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
+//          </button>
+//         </td> 
+//        </tr>
+//         `
+//     }
+//     showListCarts += html
+// }
