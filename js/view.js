@@ -23,6 +23,7 @@ view.setUpPageViewBtn = async function (classBtn, namePage) {
     if (allBtn.length > 0) {
         for (let i = 0; i < allBtn.length; i++) {
             allBtn[i].onclick = async function () {
+                console.log(classBtn)
                 await view.showScreen(namePage)
             }
         }
@@ -138,7 +139,7 @@ view.showScreen = async function (screenName) {
             }
             addToCart2.onclick = function()
             {
-                model.saveCurrentProductData(data[0])
+                model.saveCurrentProductData(data[1])
                 console.log(model.listProduct)
             }   
             //thoát tài khoản
@@ -150,11 +151,13 @@ view.showScreen = async function (screenName) {
         case 'cart':
             content.innerHTML = components.cart
             view.makeProfile()
+            cartItems()
             let backShop = document.getElementById("back-shop")
             backShop.onclick = function()
             {
                 view.showScreen("shop")
             }
+            
             break;
         case 'order':
             content.innerHTML = components.inforDataProduct
@@ -179,40 +182,111 @@ view.showScreen = async function (screenName) {
                     view.validate(zip != "", "zip-error", "Please provide a valid zip."),
                 ]
                 if(isPassed(validateResult)){
-                    controller.order()
+                    controller.order(model.listProduct,firstName,lastName,phone,address,city,zip)
                 }
             }
             break;
     }
 }
-// view.showCarts = function()
-// {
-//     let showListCarts = document.getElementById("show-list-carts")
-//     showListCarts.innerHTML =""
-//     for(let data of model.listProduct){
-//         let html = `
-//         <tr id="${data.id}"> 
-//         <td data-th="Product"> 
-//          <div class="row"> 
-//           <div class="col-sm-2 hidden-xs"><img src="${data.urlImg}">
-//           </div> 
-//           <div class="col-sm-10"> 
-//            <h4 class="nomargin">${data.nameProduct}</h4> 
-//            <p>Description of Product 1</p> 
-//           </div> 
-//          </div> 
-//         </td> 
-//         <td data-th="Price">${data.price}</td> 
-//         <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
-//         </td> 
-//         <td data-th="Subtotal" class="text-center">${data.price}</td> 
-//         <td class="actions" data-th="">
-//          </button> 
-//          <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
-//          </button>
-//         </td> 
-//        </tr>
-//         `
-//     }
-//     showListCarts += html
-// }
+function cartItems()
+{
+    let showListCarts = document.getElementById("show-list-carts")
+    let showTotal = document.getElementById("Total")
+    let totalMoney = 0
+    showListCarts.innerHTML =""
+    for(let data of model.listProduct){
+        let html = `
+        <tr id="product${data.id}"> 
+        <td data-th="Product"> 
+         <div class="row"> 
+          <div class="col-sm-2 hidden-xs"><img src="${data.urlImg}">
+          </div> 
+          <div class="col-sm-10"> 
+           <h4 class="nomargin">${data.nameProduct}</h4> 
+           <p>Description of Product 1</p> 
+          </div> 
+         </div> 
+        </td> 
+        <td data-th="Price">${data.price}</td> 
+        <td data-th="Quantity"><input class="form-control text-center" id ="Count${data.id}" value="${data.Count}" type="number">
+        </td> 
+        <td data-th="Subtotal" class="text-center" id = "totalOneProduct${data.id}">${data.price*data.Count}</td> 
+        <td class="actions" data-th="">
+         </button> 
+         <button id="detele${data.id}" onclick="myFunction()" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
+         </button>
+        </td> 
+       </tr>
+        `
+        totalMoney += data.price*data.Count
+        model.totalMoney = totalMoney
+        showListCarts.innerHTML += html
+    }
+    showTotal.innerHTML = totalMoney
+    for(let datas of model.listProduct)
+    {
+        let getIdDelete = document.getElementById("detele"+datas.id)
+        getIdDelete.onclick = function()
+        {
+            let getIdProduct = document.getElementById("product"+datas.id)
+            getIdProduct.remove()
+            //Xóa dữ liệu đơn hàng
+            let index = model.listProduct.findIndex(x=>x.id === datas.id)
+            console.log("Có index ở vị trí là: "+index)
+            model.listProduct.splice(index,1)
+            console.log(model.listProduct)
+            //Xóa hiển thị tổng số tiền
+            model.totalMoney = model.totalMoney - datas.price*datas.Count
+            showTotal.innerHTML = model.totalMoney
+        }
+        
+        let getIdCount = document.getElementById("Count"+datas.id)
+        getIdCount.onchange = function()
+        {
+            if(getIdCount.value ==0)
+            {
+                let getIdProduct = document.getElementById("product"+datas.id)
+                getIdProduct.remove()
+                let index = model.listProduct.findIndex(x=>x.id === datas.id)
+                console.log("Có index ở vị trí là: "+index)
+                model.listProduct.splice(index,1)
+                model.totalMoney = model.totalMoney - datas.price*datas.Count
+                showTotal.innerHTML = model.totalMoney
+                console.log(model.listProduct)
+            }
+            else
+            {
+                let sum = 0
+                let showTotalOneProduct = document.getElementById("totalOneProduct"+datas.id)
+                let totalProduct = datas.price*getIdCount.value // Tính tổng trên 1 sản phẩm
+                // console.log(totalProduct)
+                showTotalOneProduct.innerHTML = totalProduct//SHOW KẾT QUẢ CỦA 1 SẢN PHẨM
+                let index = model.listProduct.findIndex(x=>x.id === datas.id)
+                //Tính tổng sản phẩm mới thay đổi số lượng
+                sum += datas.price*getIdCount.value
+                console.log(sum)
+                datas.total = sum
+                model.listProduct[index].total = sum
+    
+    
+                // console.log(`gia tri ${model.listProduct[index].total}`)
+                // console.log("giá trị totalMoney là:" + totalMoney)
+                // console.log("giá trị getIdCount.value là:" + getIdCount.value)
+                // console.log("giá trị listProduct[index].Count là:" + model.listProduct[index].Count)
+                // console.log("giá trị datas.price là:" + datas.price)
+    
+                //GÁN CHO BIẾN TỔNG SẢN PHẨM TOÀN BỘ SẢN PHẨM
+                totalMoney = totalMoney + (getIdCount.value-model.listProduct[index].Count)*datas.price
+                // console.log("giá trị totalMoney là:" + totalMoney)
+                model.listProduct[index].Count = getIdCount.value//gán lại giá trị tại model
+                console.log(model.listProduct)
+                // console.log(totalMoney)
+                // console.log("Giá trị index của "+datas.id+" là: "+model.listProduct[index].Count)
+                // console.log("Giá trị của "+datas.id+" Index: "+datas.Count)
+                model.totalMoney = totalMoney
+                console.log("Giá trị total: "+ model.totalMoney)
+                showTotal.innerHTML = model.totalMoney
+            }
+        }
+    }
+}

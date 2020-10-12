@@ -1238,7 +1238,7 @@ components.main =components.header +
 			 <li>
 				 <img src="images/plus.png" alt=""/>
 				 <ul class="icon1 sub-icon1 profile_img">
-				 <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
+				 <li><a class="active-icon c1" href="#" id="add-to-cart1">Add To Bag </a>
 				   <ul class="sub-icon1 list">
 					   <li><h3>sed diam nonummy</h3><a href=""></a></li>
 					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -1280,7 +1280,7 @@ components.main =components.header +
 			 <li>
 				 <img src="images/plus.png" alt=""/>
 				 <ul class="icon1 sub-icon1 profile_img">
-				 <li><a class="active-icon c1" href="#" id="add-to-cart">Add To Bag </a>
+				 <li><a class="active-icon c1" href="#" id="add-to-cart2">Add To Bag </a>
 				   <ul class="sub-icon1 list">
 					   <li><h3>sed diam nonummy</h3><a href=""></a></li>
 					   <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
@@ -3425,55 +3425,15 @@ components.cart = components.headerProfile +	 `
     <th style="width:10%"> </th> 
    </tr> 
   </thead> 
-  <tbody id="show-list-carts"><tr> 
-   <td data-th="Product"> 
-    <div class="row"> 
-     <div class="col-sm-2 hidden-xs"><img src="https://firebasestorage.googleapis.com/v0/b/webfooseshoes.appspot.com/o/pic1.jpg?alt=media&token=e9658635-5fb4-4710-91a6-a7d735865c1e" alt="Product 1" class="img-responsive" width="100">
-     </div> 
-     <div class="col-sm-10"> 
-      <h4 class="nomargin">Product 1</h4> 
-      <p>Description of Product 1</p> 
-     </div> 
-    </div> 
-   </td> 
-   <td data-th="Price">200.000 đ</td> 
-   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
-   </td> 
-   <td data-th="Subtotal" class="text-center">200.000 đ</td> 
-   <td class="actions" data-th="">
-    </button> 
-    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
-    </button>
-   </td> 
-  </tr> 
-  <tr> 
-   <td data-th="Product"> 
-    <div class="row"> 
-     <div class="col-sm-2 hidden-xs"><img src="https://firebasestorage.googleapis.com/v0/b/webfooseshoes.appspot.com/o/pic2.jpg?alt=media&token=a1f89fb8-daba-43ed-b222-d7468be3c33e" alt="Product 1" class="img-responsive" width="100">
-     </div> 
-     <div class="col-sm-10"> 
-      <h4 class="nomargin">Product 2</h4> 
-      <p>Description of Product 2</p> 
-     </div> 
-    </div> 
-   </td> 
-   <td data-th="Price">300.000 đ</td> 
-   <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
-   </td> 
-   <td data-th="Subtotal" class="text-center">300.000 đ</td> 
-   <td class="actions" data-th="">
-    </button> 
-    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
-    </button>
-   </td> 
-  </tr> 
+  <tbody id="show-list-carts">
+
   </tbody><tfoot> 
     
    <tr> 
     <td><a href="#" class="btn btn-warning" id="back-shop"><i class="fa fa-angle-left"></i> Back shop</a>
     </td> 
     <td colspan="2" class="hidden-xs"> </td> 
-    <td class="hidden-xs text-center"><span style="font-weight: bold;">Total money:</span> <strong id="Total">500.000 đ</strong>
+    <td class="hidden-xs text-center"><span style="font-weight: bold;">Total money:</span> <strong id="Total"></strong>
     </td> 
     <td><a id="order-link" href="#" class="btn btn-success btn-block order-btn">Order <i class="fa fa-angle-right"></i></a>
     </td> 
@@ -3492,14 +3452,14 @@ components.inforDataProduct = components.headerProfile+ `
 				<label for="validationServer01">First name</label>
 				<input type="text" class="form-control " id="validationServer01" placeholder="First name" required>
 				<span></span>
-				<div class="valid-feedback">
+				<div class="invalid-feedback">
 				  Looks good!
 				</div>
 			  </div>
 			  <div class="col-md-4 mb-3">
 				<label for="validationServer02">Last name</label>
-				<input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" required>
-				<div class="valid-feedback">
+				<input type="text" class="form-control " id="validationServer02" placeholder="Last name" required>
+				<div class="invalid-feedback">
 				  Looks good!
 				</div>
 			  </div>
@@ -3509,7 +3469,7 @@ components.inforDataProduct = components.headerProfile+ `
 				  <div class="input-group-prepend">
 					<span class="input-group-text" id="inputGroupPrepend3"><i class="fa fa-phone"></i></span>
 				  </div>
-				  <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+				  <input type="text" class="form-control " id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
 				  <div class="invalid-feedback">
 					Please choose a username.
 				  </div>
@@ -3519,16 +3479,19 @@ components.inforDataProduct = components.headerProfile+ `
 			<div class="form-row">
 			  <div class="col-md-6 mb-3">
 				<label for="validationServer03">Address</label>
-				<input type="text" class="form-control is-invalid" id="validationServer03" required>
+				<input type="text" class="form-control " id="validationServer03" required>
 				<div class="invalid-feedback">
 				  Please provide a valid city.
 				</div>
 			  </div>
 			  <div class="col-md-3 mb-3">
 				<label for="validationServer04">City</label>
-				<select class="custom-select is-invalid" id="validationServer04" required>
+				<select class="custom-select " id="validationServer04" required>
 				  <option selected disabled value="">Choose...</option>
-				  <option>...</option>
+				  <option>Quang Ninh</option>
+				  <option>Ha Noi</option>
+				  <option>Hai Phong</option>
+				  <option>Tien Giang</option>
 				</select>
 				<div class="invalid-feedback">
 				  Please select a valid state.
@@ -3536,7 +3499,7 @@ components.inforDataProduct = components.headerProfile+ `
 			  </div>
 			  <div class="col-md-3 mb-3">
 				<label for="validationServer05">Zip</label>
-				<input type="text" class="form-control is-invalid" id="validationServer05" required>
+				<input type="text" class="form-control " id="validationServer05" required>
 				<div class="invalid-feedback">
 				  Please provide a valid zip.
 				</div>
@@ -3544,7 +3507,7 @@ components.inforDataProduct = components.headerProfile+ `
 			</div>
 			<div class="form-group">
 			  <div class="form-check">
-				<input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+				<input class="form-check-input " type="checkbox" value="" id="invalidCheck3" required>
 				<label class="form-check-label" for="invalidCheck3">
 				  Agree to terms and conditions
 				</label>

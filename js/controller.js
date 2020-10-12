@@ -43,47 +43,8 @@ controller.loadData = async function()
     }
     return data
 }
-// controller.addInforProduct = async function()
-// {
-//     let resultProduct = await firebase.firestore().collection('Products')
-//     let data = []
-//     for(let doc of resultProduct.docs){
-//         data.push(refineData(doc))
-//     }
-//     try
-//     {
-//         let currentEmail = firebase.auth().currentUser.email;
-//         if (friendEmail == currentEmail) {
-//             let newdataProduct = {
-//                 nameProduct: 
-//             }
-//         }
-//     }
-// }
-// controller.order = async function(inforProduct,firstName,lastName,phone,address,city,zip)
-// {
 
-//     try{
-//         if(firebase.auth().currentUser.email != null)
-//         {
-//             let currentData = {
-//                 inforProduct = inforProduct,
-//                 firstName = firstName,
-//                 lastName = lastName,
-//                 phone = phone,
-//                 address = address,
-//                 city = city,
-//                 zip = zip,
-//                 createdAt: new Date().toLocaleString()
-//             }
-//             await firebase.firestore().collection("data").add(currentData);
-//         }  
-//     }catch(error)
-//     {
-//         view.setText("chose-error","Email successfully sent!")
-//     }
-   
-// }
+
 controller.forgotPass = async function (email){
     view.setText("emailForgot-error","")
     view.setActive("send-pass-btn",false)
