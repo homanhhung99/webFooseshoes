@@ -2835,7 +2835,7 @@ components.shop =`
 	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">£480</div>
+                       <div class="price">£30</div>
 					   </div>
 					    </div>
 					   <span class="rating1">
@@ -2877,7 +2877,7 @@ components.shop =`
 	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">£30</div>
+                       <div class="price">£100	</div>
 					   </div>
 					    </div>
 					   <span class="rating1">
@@ -2919,7 +2919,7 @@ components.shop =`
 	                       		<div class="info single-btn" id="single-link">Quick View</div>
 			                  </div>
 	                    </div>
-                       <div class="price">£100</div>
+                       <div class="price">£480</div>
 					   </div>
 					    </div>
 					   <span class="rating1">
