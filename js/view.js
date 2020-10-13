@@ -171,7 +171,7 @@ view.showScreen = async function (screenName) {
             }
             else
             {
-                // alert("BẠN ĐÉO CÓ ĐƠN HÀNG")
+                alert("Your shopping cart is empty!")
                 view.makeProfile()
             }
             break;
