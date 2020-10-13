@@ -44,9 +44,10 @@ controller.loadData = async function()
     return data
 }
 
-controller.order = async function(firstName,lastName,phone,address,city,zip)
+controller.order = async function(data,firstName,lastName,phone,address,city,zip)
 {
     let newData = {
+        data,
         firstName,
         lastName,
         phone,

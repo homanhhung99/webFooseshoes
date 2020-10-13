@@ -176,7 +176,7 @@ view.showScreen = async function (screenName) {
                 let zip = formOrder.zip.value.trim()
                 
                 let validateResult = [
-                    view.validate(firstName != "", "    ", "Please enter your first name!"),
+                    view.validate(firstName != "", "firstName-error", "Please enter your first name!"),
                     view.validate(lastName != "", "lastName-error", "Please enter your last name!"),
                     view.validate(phone != "", "phone-error", "Please enter your phone"),
                     view.validate(address != "", "address-error", "Please provide a valid Address."),
@@ -184,7 +184,7 @@ view.showScreen = async function (screenName) {
                     view.validate(zip != "", "zip-error", "Please provide a valid zip."),
                 ]
                 if(isPassed(validateResult)){
-                    controller.order(firstName,lastName,phone,address,city,zip)
+                    controller.order(model.listProduct,firstName,lastName,phone,address,city,zip)
                 }
             }
             break;
