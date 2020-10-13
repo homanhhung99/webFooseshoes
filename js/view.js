@@ -35,11 +35,17 @@ view.makeAllBtnShow = function () {
     view.setUpPageViewBtn("sign-in-btn", "signIn")
     view.setUpPageViewBtn("forgot-btn", "forgotPass")
 }
+
+view.orderAndPay = function()
+{
+    view.setUpPageViewBtn("cart-btn", "cart")
+    view.setUpPageViewBtn("order-btn", "order")
+}
 view.makeProfile = function()
 {
     view.setUpPageViewBtn("shop-btn", "shop")
     view.setUpPageViewBtn("cart-btn", "cart")
-    view.setUpPageViewBtn("order-btn", "order")
+    // view.setUpPageViewBtn("order-btn", "order")
 }
 view.showScreen = async function (screenName) {
     let content = document.getElementById('content')
@@ -159,7 +165,15 @@ view.showScreen = async function (screenName) {
             {
                 view.showScreen("shop")
             }
-            
+            if(model.listProduct.length != 0)
+            {
+                view.orderAndPay()
+            }
+            else
+            {
+                // alert("BẠN ĐÉO CÓ ĐƠN HÀNG")
+                view.makeProfile()
+            }
             break;
         case 'order':
             content.innerHTML = components.inforDataProduct
@@ -183,8 +197,12 @@ view.showScreen = async function (screenName) {
                     view.validate(city != "", "city-error", "Please select a valid city."),
                     view.validate(zip != "", "zip-error", "Please provide a valid zip."),
                 ]
-                if(isPassed(validateResult)){
+                if(isPassed(validateResult) && model.listProduct.length != 0){
                     controller.order(model.listProduct,firstName,lastName,phone,address,city,zip)
+                }
+                else
+                {
+                    view.setText("pay-error","Your shopping cart is empty!")
                 }
             }
             break;

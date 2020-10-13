@@ -56,6 +56,8 @@ controller.order = async function(data,firstName,lastName,phone,address,city,zip
         zip
     }
     await firebase.firestore().collection("data").add(newData);
+    view.setText("pay-success","Your order has been successfully sent!")
+    view.setActive("pay-btn",true)
     console.log("đã gửi thành công")
 }
 

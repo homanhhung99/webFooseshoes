@@ -3445,3 +3445,14 @@ p.cart a:hover {
   .footer-item .social-footer li:last-child {
     margin-left: .5rem;
   }	
+
+#pay-success
+{
+	color: #13fb13;
+	font-weight: bold;
+}
+#pay-error
+{
+	color: red;
+	font-weight: bold;
+}
