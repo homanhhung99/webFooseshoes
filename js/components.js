@@ -3449,60 +3449,48 @@ components.inforDataProduct = components.headerProfile+ `
 		<form id="form-inforDataProduct">
 			<div class="form-row">
 			  <div class="col-md-4 mb-3">
-				<label for="validationServer01">First name</label>
-				<input type="text" class="form-control " id="validationServer01" placeholder="First name" required>
+				<label for="firstName">First name</label>
+				<input type="text" class="form-control " id="firstName" placeholder="First name" required>
 				<span></span>
-				<div class="invalid-feedback">
-				  Looks good!
-				</div>
+				<div class="message-error" id="firstName-error"></div>
 			  </div>
 			  <div class="col-md-4 mb-3">
-				<label for="validationServer02">Last name</label>
-				<input type="text" class="form-control " id="validationServer02" placeholder="Last name" required>
-				<div class="invalid-feedback">
-				  Looks good!
-				</div>
+				<label for="lastName">Last name</label>
+				<input type="text" class="form-control " id="lastName" placeholder="Last name" required>
+				<div class="message-error" id="lastName-error"></div>
 			  </div>
 			  <div class="col-md-4 mb-3">
-				<label for="validationServerUsername">Phone</label>
+				<label for="phone">Phone</label>
 				<div class="input-group">
 				  <div class="input-group-prepend">
-					<span class="input-group-text" id="inputGroupPrepend3"><i class="fa fa-phone"></i></span>
+					<span class="input-group-text" id="phone"><i class="fa fa-phone"></i></span>
 				  </div>
-				  <input type="text" class="form-control " id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
-				  <div class="invalid-feedback">
-					Please choose a username.
-				  </div>
+				  <input type="text" class="form-control " id="phone" aria-describedby="inputGroupPrepend3" required>
+				  <div class="message-error" id="phone-error"></div>
 				</div>
 			  </div>
 			</div>
 			<div class="form-row">
 			  <div class="col-md-6 mb-3">
-				<label for="validationServer03">Address</label>
-				<input type="text" class="form-control " id="validationServer03" required>
-				<div class="invalid-feedback">
-				  Please provide a valid city.
-				</div>
+				<label for="address">Address</label>
+				<input type="text" class="form-control " id="address" required>
+				<div class="message-error" id="address-error"></div>
 			  </div>
 			  <div class="col-md-3 mb-3">
-				<label for="validationServer04">City</label>
-				<select class="custom-select " id="validationServer04" required>
+				<label for="city">City</label>
+				<select class="custom-select " id="city" required>
 				  <option selected disabled value="">Choose...</option>
 				  <option>Quang Ninh</option>
 				  <option>Ha Noi</option>
 				  <option>Hai Phong</option>
 				  <option>Tien Giang</option>
 				</select>
-				<div class="invalid-feedback">
-				  Please select a valid state.
-				</div>
+				<div class="message-error" id="city-error"></div>
 			  </div>
 			  <div class="col-md-3 mb-3">
-				<label for="validationServer05">Zip</label>
-				<input type="text" class="form-control " id="validationServer05" required>
-				<div class="invalid-feedback">
-				  Please provide a valid zip.
-				</div>
+				<label for="zip">Zip</label>
+				<input type="text" class="form-control " id="zip" required>
+				<div class="message-error" id="zip-error"></div>
 			  </div>
 			</div>
 			<div class="form-group">
@@ -3516,7 +3504,7 @@ components.inforDataProduct = components.headerProfile+ `
 				</div>
 			  </div>
 			</div>
-			<button class="btn btn-primary" type="submit">Submit form</button>
+			<button class="btn btn-primary" type="submit">PAY</button>
 		  </form>
 </div>
 <div class="col-md-4">

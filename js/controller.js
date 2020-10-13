@@ -44,6 +44,19 @@ controller.loadData = async function()
     return data
 }
 
+controller.order = async function(firstName,lastName,phone,address,city,zip)
+{
+    let newData = {
+        firstName,
+        lastName,
+        phone,
+        address,
+        city,
+        zip
+    }
+    await firebase.firestore().collection("data").add(newData);
+    console.log("đã gửi thành công")
+}
 
 controller.forgotPass = async function (email){
     view.setText("emailForgot-error","")

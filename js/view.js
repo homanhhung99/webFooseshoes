@@ -128,9 +128,11 @@ view.showScreen = async function (screenName) {
         case 'shop':
             content.innerHTML = components.shop
             view.makeProfile()
+            let getName = document.getElementById("myNameAccount")
             let addToCart1 = document.getElementById("add-to-cart1")
             let addToCart2 = document.getElementById("add-to-cart2")
             let data =  await controller.loadData()
+            getName.innerHTML = ": "+firebase.auth().currentUser.displayName
             // console.log(data)//Lấy dữ liệu data về
             addToCart1.onclick = function()
             {
@@ -174,7 +176,7 @@ view.showScreen = async function (screenName) {
                 let zip = formOrder.zip.value.trim()
                 
                 let validateResult = [
-                    view.validate(firstName != "", "firstName-error", "Please enter your first name!"),
+                    view.validate(firstName != "", "    ", "Please enter your first name!"),
                     view.validate(lastName != "", "lastName-error", "Please enter your last name!"),
                     view.validate(phone != "", "phone-error", "Please enter your phone"),
                     view.validate(address != "", "address-error", "Please provide a valid Address."),
@@ -182,7 +184,7 @@ view.showScreen = async function (screenName) {
                     view.validate(zip != "", "zip-error", "Please provide a valid zip."),
                 ]
                 if(isPassed(validateResult)){
-                    controller.order(model.listProduct,firstName,lastName,phone,address,city,zip)
+                    controller.order(firstName,lastName,phone,address,city,zip)
                 }
             }
             break;
@@ -239,7 +241,6 @@ function cartItems()
             model.totalMoney = model.totalMoney - datas.price*datas.Count
             showTotal.innerHTML = model.totalMoney
         }
-        
         let getIdCount = document.getElementById("Count"+datas.id)
         getIdCount.onchange = function()
         {
@@ -276,16 +277,32 @@ function cartItems()
                 // console.log("giá trị datas.price là:" + datas.price)
     
                 //GÁN CHO BIẾN TỔNG SẢN PHẨM TOÀN BỘ SẢN PHẨM
-                totalMoney = totalMoney + (getIdCount.value-model.listProduct[index].Count)*datas.price
-                // console.log("giá trị totalMoney là:" + totalMoney)
-                model.listProduct[index].Count = getIdCount.value//gán lại giá trị tại model
-                console.log(model.listProduct)
-                // console.log(totalMoney)
-                // console.log("Giá trị index của "+datas.id+" là: "+model.listProduct[index].Count)
-                // console.log("Giá trị của "+datas.id+" Index: "+datas.Count)
-                model.totalMoney = totalMoney
-                console.log("Giá trị total: "+ model.totalMoney)
-                showTotal.innerHTML = model.totalMoney
+                if(model.listProduct.length==1)
+                {
+                    totalMoney = sum// + (getIdCount.value-model.listProduct[index].Count)*datas.price
+                    // console.log("giá trị totalMoney là:" + totalMoney)
+                    model.listProduct[index].Count = getIdCount.value//gán lại giá trị tại model
+                    console.log(model.listProduct)
+                    // console.log(totalMoney)
+                    // console.log("Giá trị index của "+datas.id+" là: "+model.listProduct[index].Count)
+                    // console.log("Giá trị của "+datas.id+" Index: "+datas.Count)
+                    model.totalMoney = totalMoney
+                    console.log("Giá trị total: "+ model.totalMoney)
+                    showTotal.innerHTML = model.totalMoney
+                }
+                else
+                {
+                    totalMoney = totalMoney + (getIdCount.value-model.listProduct[index].Count)*datas.price
+                    // console.log("giá trị totalMoney là:" + totalMoney)
+                    model.listProduct[index].Count = getIdCount.value//gán lại giá trị tại model
+                    console.log(model.listProduct)
+                    // console.log(totalMoney)
+                    // console.log("Giá trị index của "+datas.id+" là: "+model.listProduct[index].Count)
+                    // console.log("Giá trị của "+datas.id+" Index: "+datas.Count)
+                    model.totalMoney = totalMoney
+                    console.log("Giá trị total: "+ model.totalMoney)
+                    showTotal.innerHTML = model.totalMoney
+                }
             }
         }
     }
