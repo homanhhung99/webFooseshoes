@@ -204,9 +204,10 @@ view.showScreen = async function (screenName) {
                     view.validate(phone != "" && phonenumber(phone), "phone-error", "Your phone number is wrong or you have not entered information yet!"),
                     view.validate(address != "", "address-error", "Please provide a valid Address."),
                     view.validate(city != "", "city-error", "Please select a valid city."),
-                    view.validate(zip != "", "zip-error", "Please provide a valid zip."),
+                    view.validate(zip != "" && !isNaN(zip), "zip-error", "Please provide a valid zip."),
                 ]
                 console.log(phonenumber(phone))
+                console.log(!isNaN(phone))
                 if(isPassed(validateResult) && model.listProduct.length != 0){
                     //nếu có dữ liệu và giỏ hàng khác 0 thì chuyển qua controller xử lý
                     controller.order(model.listProduct,firstName,lastName,phone,address,city,zip)

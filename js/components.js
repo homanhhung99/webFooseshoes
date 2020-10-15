@@ -3480,9 +3480,9 @@ components.inforDataProduct = components.headerProfile+ `
 				<label for="city">City</label>
 				<select class="custom-select " id="city" required>
 				  <option selected disabled value="">Choose...</option>
-				  <option>Quang Ninh</option>
-				  <option>Ha Noi</option>
-				  <option>Hai Phong</option>
+				  <option>New York</option>
+				  <option>Los Angeles</option>
+				  <option>Chicago</option>
 				  <option>Tien Giang</option>
 				</select>
 				<div class="message-error" id="city-error"></div>
