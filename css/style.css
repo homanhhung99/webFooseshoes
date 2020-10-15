@@ -3446,11 +3446,6 @@ p.cart a:hover {
     margin-left: .5rem;
   }	
 
-#pay-success
-{
-	color: #13fb13;
-	font-weight: bold;
-}
 #pay-error
 {
 	color: red;

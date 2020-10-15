@@ -46,19 +46,19 @@ controller.loadData = async function()
 
 controller.order = async function(data,firstName,lastName,phone,address,city,zip)
 {
-    let newData = {
-        data,
-        firstName,
-        lastName,
-        phone,
-        address,
-        city,
-        zip
-    }
-    await firebase.firestore().collection("data").add(newData);
-    view.setText("pay-success","Your order has been successfully sent!")
-    view.setActive("pay-btn",false)
-    console.log("đã gửi thành công")
+        let newData = {
+            data,
+            firstName,
+            lastName,
+            phone,
+            address,
+            city,
+            zip
+        }
+        await firebase.firestore().collection("data").add(newData);
+        view.setText("pay-error",`<span style="color: #41dc41;">Your order has been successfully sent!</span>`)
+        view.setActive("pay-btn",false)
+        console.log("đã gửi thành công")
 }
 
 controller.forgotPass = async function (email){

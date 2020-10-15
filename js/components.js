@@ -3506,7 +3506,6 @@ components.inforDataProduct = components.headerProfile+ `
 			</div>
 			<button id="pay-btn" class="btn btn-primary" type="submit">PAY</button>
 		  </form>
-		  <div class="messege-error" id="pay-success"></div>
 		  <div class="messege-error" id="pay-error"></div>
 </div>
 <div class="col-md-4">

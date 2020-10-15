@@ -60,13 +60,14 @@ view.showScreen = async function (screenName) {
             let formSignIn = document.getElementById('form-sign-in')
             formSignIn.onsubmit = function (event) {
                 event.preventDefault()
+                //nhập dữ liệu và lấy giá trị
                 let email = formSignIn.email.value;
                 let password = formSignIn.password.value;
                 let validateResult = [
-                    view.validate(email != "", "email-error", "Input your email"),
+                    view.validate(email != "" && validateEmail(email), "email-error", "Input your email"),
                     view.validate(password != "", "password-error", "Input your password")
                 ];
-                if (isPassed(validateResult)) {
+                if (isPassed(validateResult)) {//nếu đúng và đủ định dạng thì đến phần controller xử lý trong firebase
                     // gửi dữ liệu qua controller
                     controller.signIn(email, password);
                 }
@@ -107,16 +108,20 @@ view.showScreen = async function (screenName) {
         case 'forgotPass':
             content.innerHTML = components.forgotpass
             let formForgotPass = document.getElementById('form-forgot-pass')
+            //Form nhập quên pass
             formForgotPass.onsubmit = function(event)
             {
                 console.log(formForgotPass)
                 event.preventDefault()
+                //nhập email
                 let email = formForgotPass.email.value.trim()
                 let validateResult = [
+                    //kiểm tra xem có đúng định dạng của email và rỗng
                     view.validate(email != "" && validateEmail(email), "emailForgot-error", "Invalid email")
                 ]
-                if(isPassed(validateResult)){
-                    controller.forgotPass(email)
+                
+                if(isPassed(validateResult)){//nếu == True ( nghìa là đúng định dạng email và phần tử không rỗng)
+                    controller.forgotPass(email)//chuyển sang mục controller để xử lý trong firebase
                 }
             }
             view.makeAllBtnShow()
@@ -137,14 +142,15 @@ view.showScreen = async function (screenName) {
             let getName = document.getElementById("myNameAccount")
             let addToCart1 = document.getElementById("add-to-cart1")
             let addToCart2 = document.getElementById("add-to-cart2")
-            let data =  await controller.loadData()
-            getName.innerHTML = ": "+firebase.auth().currentUser.displayName
-            // console.log(data)//Lấy dữ liệu data về
+            let data =  await controller.loadData()   // console.log(data)//Lấy dữ liệu data về
+            getName.innerHTML = ": "+firebase.auth().currentUser.displayName //Hiển thị tên người dùng
+            // lấy sản phẩn 2
             addToCart1.onclick = function()
             {
                 model.saveCurrentProductData(data[0])
                 console.log(model.listProduct)
             }
+            //lấy sản phẩn 2
             addToCart2.onclick = function()
             {
                 model.saveCurrentProductData(data[1])
@@ -159,17 +165,19 @@ view.showScreen = async function (screenName) {
         case 'cart':
             content.innerHTML = components.cart
             view.makeProfile()
+            //Hàm sử dụng để View tăng giảm số lượng trong giỏ hàng
             cartItems()
             let backShop = document.getElementById("back-shop")
             backShop.onclick = function()
             {
                 view.showScreen("shop")
             }
+            //Nếu giỏ hàng có hàng thì được truy cập vào trang Order (Thông tin người nhận)
             if(model.listProduct.length != 0)
             {
                 view.orderAndPay()
             }
-            else
+            else//nếu không có hàng thì sẽ không vào được và thông báo cho người dùng là bạn chưa có hàng
             {
                 alert("Your shopping cart is empty!")
                 view.makeProfile()
@@ -181,6 +189,7 @@ view.showScreen = async function (screenName) {
             let formOrder = document.getElementById("form-inforDataProduct")
             formOrder.onsubmit = function(event)
             {
+                //nhập và lấy dữ liệu từ input
                 event.preventDefault()
                 let firstName = formOrder.firstName.value.trim()
                 let lastName = formOrder.lastName.value.trim()
@@ -192,17 +201,20 @@ view.showScreen = async function (screenName) {
                 let validateResult = [
                     view.validate(firstName != "", "firstName-error", "Please enter your first name!"),
                     view.validate(lastName != "", "lastName-error", "Please enter your last name!"),
-                    view.validate(phone != "", "phone-error", "Please enter your phone"),
+                    view.validate(phone != "" && phonenumber(phone), "phone-error", "Your phone number is wrong or you have not entered information yet!"),
                     view.validate(address != "", "address-error", "Please provide a valid Address."),
                     view.validate(city != "", "city-error", "Please select a valid city."),
                     view.validate(zip != "", "zip-error", "Please provide a valid zip."),
                 ]
+                console.log(phonenumber(phone))
                 if(isPassed(validateResult) && model.listProduct.length != 0){
+                    //nếu có dữ liệu và giỏ hàng khác 0 thì chuyển qua controller xử lý
                     controller.order(model.listProduct,firstName,lastName,phone,address,city,zip)
                 }
                 else
                 {
-                    view.setText("pay-error","Your shopping cart is empty!")
+                    //thông báo lỗi giỏ hàng ko có
+                    view.setText("pay-error","You cannot submit this order!")
                 }
             }
             break;
