@@ -3483,7 +3483,10 @@ components.inforDataProduct = components.headerProfile+ `
 				  <option>New York</option>
 				  <option>Los Angeles</option>
 				  <option>Chicago</option>
-				  <option>Tien Giang</option>
+				  <option>Phoenix</option>
+				  <option>San Diego</option>
+				  <option>San Jose</option>
+				  <option>San Francisco</option>
 				</select>
 				<div class="message-error" id="city-error"></div>
 			  </div>
