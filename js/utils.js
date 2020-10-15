@@ -29,7 +29,7 @@ function phonenumber(str)
 }
 
 //max kí tự ZIP
-function isLengthZip(characterlength)
+function LengthZip(characterlength)
 {
     let str = characterlength
     if(str.length <=10)
@@ -42,7 +42,7 @@ function isLengthZip(characterlength)
     }
 }
 //max kí tự sđt
-function isLengthPhone(characterlength)
+function LengthAll(characterlength)
 {
     let str = characterlength
     if(str.length <=20)
@@ -54,3 +54,12 @@ function isLengthPhone(characterlength)
         return false
     }
 }
+//check kí tự đặc biệt trong tên
+function specialCharacters(input) {
+    var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+    if(format.test(input)){
+     return false
+    } else {
+        return true
+    }
+  }
