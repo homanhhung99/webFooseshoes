@@ -201,10 +201,10 @@ view.showScreen = async function (screenName) {
                 let validateResult = [
                     view.validate(firstName != "", "firstName-error", "Please enter your first name!"),
                     view.validate(lastName != "", "lastName-error", "Please enter your last name!"),
-                    view.validate(phone != "" && phonenumber(phone), "phone-error", "Your phone number is wrong or you have not entered information yet!"),
+                    view.validate(phone != "" && phonenumber(phone) && isLengthPhone(phone), "phone-error", "Your phone number is wrong or you have not entered information yet!"),
                     view.validate(address != "", "address-error", "Please provide a valid Address."),
                     view.validate(city != "", "city-error", "Please select a valid city."),
-                    view.validate(zip != "" && !isNaN(zip), "zip-error", "Please provide a valid zip."),
+                    view.validate(zip != "" && !isNaN(zip) && isLengthZip(zip), "zip-error", "Please provide a valid zip."),
                 ]
                 console.log(phonenumber(phone))
                 console.log(!isNaN(phone))
